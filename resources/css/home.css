@@ -1,0 +1,236 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+
+@font-face
+{
+  font-family: 'Dastin';
+  src : url('../fonts/Dastin.otf') format('opentype'),
+        url('../fonts/Dastin.ttf') format('trutype'),
+        url('../fonts/Dastin.woff') format('woff'),
+        url('../fonts/Dastin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root
+{
+    --vert : #536964;
+    --grisF : #8b9cb6;
+    --gris : #bfc1c2;
+    --or : #FFFFF0;
+    --beige : #f1efe9;
+    --brun : #e3c7af;
+    --noir : #282828;
+}
+
+
+
+html, body
+{
+    background-color: var(--or);
+    width: 100% !important;
+    overflow-x: hidden;
+    font-family: "Dastin";
+    min-height: 500px;
+    min-width: 320px;
+}
+
+p
+{
+    font-size: clamp(1.1rem, 2vw + 0.5rem, 1.3rem);
+    line-height: 1.4em !important;
+    color: var(--noir);
+}
+
+h3
+{
+    color: white;
+    font-size: clamp(2rem, 5vw + 1rem, 6em);
+}
+
+h5
+{
+    color: white !important;
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
+}
+
+.fontBeige
+{
+    color: var(--beige);
+}
+
+.fontBlack
+{
+  color: var(--noir);
+}
+
+.fontGreen
+{
+  color: var(--vert);
+}
+
+.bg-grey
+{
+    background-color: var(--gris);
+}
+
+.bg-blue
+{
+    background-color: var(--grisF);
+}
+
+/* Indicateur de progression */
+
+#scroll-indicator
+{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: conic-gradient(gray 0%, transparent 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: background 0.3s ease;
+}
+
+/* Cercle intérieur pour l'effet de "remplissage circulaire" */
+.inner-circle
+{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: var(--beige);
+  border-radius: 50%;
+}
+
+.scroll-arrow
+{
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: gray;
+  animation: blink 1.2s infinite;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes blink
+{
+  0%, 100%
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%
+  {
+    opacity: 0.3;
+    transform: translateY(3px);
+  }
+}
+/* END */
+
+
+/* Section : Home */
+main .home
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 200px;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Réduction du padding sur petits écrans */
+@media (max-width: 1200px)
+{
+    main .home
+    {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 992px)
+{
+    main .home
+    {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    main .home
+    {
+        padding: 0 20px;
+    }
+
+    .home .mainTitleHome
+    {
+        font-size: 3rem !important;
+        letter-spacing: 0.4rem;
+    }
+
+    .home .secondTitle
+    {
+        font-size: 1.5rem;
+        display: block;
+        white-space: normal; /* évite que le texte dépasse l’écran */
+    }
+}
+
+@media (max-width: 480px)
+{
+    .home .mainTitleHome
+    {
+        font-size: 2.5rem !important;
+    }
+
+    .home .secondTitle
+    {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animation mainTitle */
+.home .mainTitleHome
+{
+    font-size: clamp(4rem, 12vw + 2rem, 10rem) !important;
+    letter-spacing: .8rem;
+    font-weight: none;
+}
+
+span.mainTitleHome:after
+{
+    content: "";
+    animation: revealHome 1.5s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes revealHome
+{
+    0%   { content: "K"; }
+    12%  { content: "KE"; }
+    25%  { content: "KEN"; }
+    37%  { content: "KENK"; }
+    50%  { content: "KENKO"; }
+    62%  { content: "KENKO-"; }
+    75%  { content: "KENKO-W"; }
+    87%  { content: "KENKO-WE"; }
+    100% { content: "KENKO-WEB"; }
+}
+
+.home .secondTitle
+{
+    font-size: clamp(1rem, 3vw + 1rem, 2.5rem);
+}
+/* END Home */

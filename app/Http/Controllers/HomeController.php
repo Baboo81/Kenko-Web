@@ -9,6 +9,14 @@ class HomeController extends Controller
 {
     public function index(): View
     {
-        return view('home');
+        /**
+         * On récupère les datas depuis le fichier : App/Data/home.php
+         */
+        $homeData = require app_path('Data/home.php');
+
+        /**
+         * On retourne la vue avec les datas
+         */
+        return view('home', compact('homeData'));
     }
 }

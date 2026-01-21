@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('styles')
+    @vite('resources/css/home.css')
+@endpush
+
 @section('content')
     {{-- Div animation : progression de la page --}}
     <div id="scroll-indicator">
@@ -13,18 +17,11 @@
     <section class="home">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    @if ($user)
-                        <p>Bienvenue, {{ $user->name }}</p>
-                    @endif
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-12 mainContent">
-                    <h1 class="mainTitleHome"></h1>
-                    <span class="secondTitle">
+                    <span class="mainTitleHome"></span>
+                    <p class="secondTitle">
                         {{ $homeData['home'] }}
-                    </span>
+                    </p>
                 </div>
             </div>
         </div>
