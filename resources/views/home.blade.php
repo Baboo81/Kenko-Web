@@ -15,9 +15,9 @@
 
     {{-- Section : Banner --}}
     <section class="home">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mainContent">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-12 text-center mainContent">
                     <span class="mainTitleHome"></span>
                     <p class="secondTitle">
                         {{ $homeData['home'] }}
@@ -27,4 +27,4 @@
         </div>
     </section>
     {{-- Section : Banner END --}}
-    @endsection
+@endsection
