@@ -1,5 +1,14 @@
 "use strict";
 
+//-----------------------
+// Librairie : Lucide
+//-----------------------
+document.addEventListener("DOMContentLoaded", () => {
+    if(window.lucide) {
+        lucide.createIcons();
+    }
+});
+
 // ----------------------------
 // Sticky navbar
 // ----------------------------
@@ -70,14 +79,18 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener('DOMContentLoaded', () => {
     const mapContainer = document.getElementById('mapid');
 
-    // Vider le container pour éviter une map "fantôme"
-    if (mapContainer) mapContainer.innerHTML = "";
+    // On sort proprement si le footer n'est pas présent
+    if (!mapContainer || typeof L === 'undefined') return;
 
-    // Créer la map seulement si elle n'existe pas encore
-    if (!window.map) {
-        window.map = L.map('mapid').setView([50.71036, 4.36889], 16.4);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(window.map);
-        L.marker([50.71036, 4.36889]).addTo(window.map);
-    }
+    // Empêcher toute double initialisation
+    if (mapContainer._leaflet_id) return;
+
+    const map = L.map(mapContainer).setView([50.71036, 4.36889], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([50.71036, 4.36889]).addTo(map);
 });
 
