@@ -1,14 +1,13 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;700&display=swap');
 
 @font-face
 {
   font-family: 'Dastin';
-  src : url('../fonts/Dastin.otf') format('opentype'),
-        url('../fonts/Dastin.ttf') format('trutype'),
-        url('../fonts/Dastin.woff') format('woff'),
-        url('../fonts/Dastin.woff2') format('woff2');
+  src : url('/public/assets/fonts/Dastin.otf') format('opentype'),
+        url('/public/assets/fonts/Dastin.ttf') format('truetype'),
+        url('/public/assets/fonts/Dastin.woff') format('woff'),
+        url('/public/assets/fonts/Dastin.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,9 +15,9 @@
 
 :root
 {
-    --vert : #536964;
+    --vert : #8ccece;
     --grisF : #8b9cb6;
-    --gris : #bfc1c2;
+    --gris : #c1c1c1;
     --or : #FFFFF0;
     --beige : #f1efe9;
     --brun : #e3c7af;
@@ -32,7 +31,7 @@ html, body
     background-color: var(--or);
     width: 100% !important;
     overflow-x: hidden;
-    font-family: "Dastin";
+    font-family: 'Dastin';
     min-height: 500px;
     min-width: 320px;
 }
@@ -213,8 +212,7 @@ h5
 .home .mainTitleHome
 {
     font-size: clamp(2rem, 6vw + 1rem, 5rem) !important;
-    letter-spacing: .8rem;
-    font-weight: none;
+    letter-spacing: 1.2rem;
 }
 
 span.mainTitleHome:after
@@ -222,6 +220,8 @@ span.mainTitleHome:after
     content: "";
     animation: revealHome 1.5s linear 1;
     animation-fill-mode: forwards;
+    font-weight: normal;
+    font-family: 'Dastin' !important;
 }
 
 @keyframes revealHome
@@ -240,5 +240,7 @@ span.mainTitleHome:after
 .home .secondTitle
 {
     font-size: clamp(1rem, 3vw + 1rem, 2.5rem);
+    font-weight: normal;
+    font-family: 'Dastin';
 }
 /* END Home */
