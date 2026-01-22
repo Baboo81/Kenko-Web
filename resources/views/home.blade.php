@@ -115,4 +115,185 @@
         </div>
     </section>
     {{-- Section : Offers  END --}}
+
+    {{-- Section : Skills --}}
+    <section class="skills">
+        <div class="container">
+            <div class="row">
+                <div class="my-5">
+                    <h1 class="text-center titleH1">
+                        {{ $homeData['skills']['main_Title'] ?? '' }}
+                    </h1>
+                </div>
+                {{-- Bloc : img --}}
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="/assets/img/pictos/atouts.svg" class="pictoAtoutsPerso"
+                        alt="Picto représentant deux personnages tenant un panneau">
+                </div>
+                {{-- Bloc : articles/pictos --}}
+                <div class="col-md-6 d-flex flex-column skillsContent">
+                    @foreach (['article1', 'article2', 'article3'] as $tempSkills)
+                        @php
+                            $article = $homeData['skills'][$tempSkills];
+                        @endphp
+                        <article class="text-center">
+                            <img src="{{ asset($article['img']) ?? '' }}" class="pictoAtouts"
+                                alt="{{ $article['text'] }}">
+                            <p class="text-muted p-1">
+                                {{ $article['text'] ?? '' }}
+                            </p>
+                        </article>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- Section : Skills END --}}
+
+     {{-- Section : Time Line --}}
+    <section class="timeLine">
+        <div class="container">
+            <div class="row">
+                <div class="my-5">
+                    <h1 class="text-center titleH1">
+                        {{ $homeData['timeline']['main_Title'] ?? '' }}
+                    </h1>
+                </div>
+            </div>
+            <section class="container py-5">
+                <div class="timeline">
+                    @foreach ($homeData['timeline']['steps'] as $step)
+                        <div class="timeline-item">
+                            <div class="timeline-content text-center">
+                                <h4 class="fw-bold my-3">{{ $step['title'] ?? '' }}</h4>
+                                <img src="{{ asset($step['img'] ?? '') }}" alt="{{ $step['alt'] ?? '' }}"
+                                    class="me-3 my-2" width="{{ $step['width'] ?? 60 }}">
+                                <p class="text-muted">{{ $step['text'] ?? '' }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </section>
+        </div>
+    </section>
+    {{-- Section : Time Line END --}}
+
+    {{-- Section : Maintenance --}}
+    <section class="maintenance">
+        <div class="container">
+            <div class="row p-2">
+                <div class="text-center my-5">
+                    <h1 class="titleH1">
+                        {{ $homeData['maintenance']['main_Title'] ?? '' }}
+                    </h1>
+                </div>
+
+                <div class="boxWeb rounded-5 p-5 d-flex flex-wrap justify-content-center">
+
+                    {{-- IMAGE — cachée mobile / visible dès sm / en haut sur md --}}
+                    <div
+                        class="col-12 col-md-6
+                            d-none d-sm-flex
+                            align-items-center justify-content-center
+                            order-md-1 order-lg-1">
+                        <img src="{{ $homeData['maintenance']['img'] }}"
+                            alt="{{ $homeData['maintenance']['alt'] }}" class="img-fluid w-100"
+                            style="object-fit:cover;">
+                    </div>
+
+                    {{-- TEXTE --}}
+                    <div class="col-12 col-md-6 order-md-2 order-lg-2">
+                        <article class="fontWhite">
+                            <p class="text-center">{!! $homeData['maintenance']['intro'] !!}</p>
+                            <h4 class="text-center my-3">{{ $homeData['maintenance']['title'] }}</h4>
+
+                            @foreach ($homeData['maintenance']['types'] as $type)
+                                <ul class="mx-3 my-4">
+                                    <h5>{{ $type['category'] }}</h5>
+                                    @foreach ($type['items'] as $item)
+                                        <li class="my-2">{{ $loop->iteration }}. {{ $item }}</li>
+                                    @endforeach
+                                </ul>
+                            @endforeach
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- Section : Maintenance END --}}
+
+
+    {{-- Section : Hébergement --}}
+    <section class="hosting">
+        <div class="container">
+            <div class="row p-2">
+                <div class="text-center my-5">
+                    <h1 class="titleH1">
+                        {{ $homeData['hosting']['main_Title'] ?? '' }}
+                    </h1>
+                </div>
+
+                <div class="boxWeb rounded-5 p-5 d-flex flex-wrap justify-content-center">
+
+                    {{-- IMAGE — cachée mobile / visible dès sm / en haut sur md --}}
+                    <div
+                        class="col-12 col-md-6
+                            d-none d-sm-flex
+                            align-items-center justify-content-center
+                            order-md-1 order-lg-2">
+                        <img src="{{ $kenkoWebData['hosting']['img'] ?? '' }}"
+                            alt="{{ $kenkoWebData['hosting']['alt'] ?? '' }}" class="img-fluid w-100"
+                            style="object-fit:cover;">
+                    </div>
+
+                    {{-- TEXTE --}}
+                    <div class="col-12 col-md-6 order-md-2 order-lg-1">
+                        <article class="fontWhite">
+                            <p class="text-center">{!! $homeData['hosting']['intro'] !!}</p>
+
+                            @foreach ($homeData['hosting']['sections'] as $section)
+                                <div class="my-3">
+                                    <h5 class="my-2">{{ $section['title'] }}</h5>
+                                    <p>{!! $section['txt'] !!}</p>
+                                </div>
+                            @endforeach
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    {{-- Section : Hébergement END --}}
+
+    {{-- Section : Trust --}}
+    <section class="trustSection">
+        <div class="container">
+            <div class="row align-items-center p-2">
+                <div class="trustBox d-flex justify-content-center align-items-center">
+                    {{-- Texte à gauche --}}
+                    <div class="col-md-3 d-flex flex-column align-items-start text-md-start text-center mx-5">
+                        <article class="text-center">
+                            <p class="fs-4 fontWhite mb-3">{{ $homeData['trust']['title1'] ?? '' }}</p>
+                            <p class="fs-3 fontWhite">{{ $homeData['trust']['title2'] ?? '' }}</p>
+                        </article>
+                    </div>
+
+                    {{-- Logos à droite --}}
+                    <div
+                        class="col-md-3 d-flex justify-content-center align-items-center position-relative logo-container">
+                        @foreach ($homeData['trust']['logos'] as $index => $logo)
+                            <img id="logo{{ $index + 1 }}" class="logo {{ $index === 0 ? 'active' : '' }}"
+                                src="{{ asset($logo['src']) ?? '' }}" alt="{{ $logo['alt'] ?? '' }}"
+                                style="height: 10rem;">
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- Section : Trust END --}}
 @endsection

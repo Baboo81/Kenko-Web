@@ -49,3 +49,35 @@ function closePopup(popupId) {
     if (popup) popup.style.display = "none";
 }
 
+// ----------------------------
+// Trust Section : logos animation
+// ----------------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const logos = document.querySelectorAll(".logo");
+    let index = 0;
+    if (logos.length > 0) {
+        setInterval(() => {
+            logos[index].classList.remove("active");
+            index = (index + 1) % logos.length;
+            logos[index].classList.add("active");
+        }, 3000);
+    }
+});
+
+// ----------------------------
+// Kenko : Footer
+// ----------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    const mapContainer = document.getElementById('mapid');
+
+    // Vider le container pour éviter une map "fantôme"
+    if (mapContainer) mapContainer.innerHTML = "";
+
+    // Créer la map seulement si elle n'existe pas encore
+    if (!window.map) {
+        window.map = L.map('mapid').setView([50.71036, 4.36889], 16.4);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(window.map);
+        L.marker([50.71036, 4.36889]).addTo(window.map);
+    }
+});
+

@@ -431,3 +431,225 @@ span.mainTitleHome:after
     /* Pop-up END */
 /* Section : offers END*/
 
+/* Section : skills*/
+.skills
+{
+    min-height: 50vh;
+    background-color: var(--or);
+    padding: 200px 0;
+}
+
+.skillsContent p
+{
+    font-size: 1.3rem;
+}
+
+.blocAtouts
+{
+    margin-top: 10%;
+}
+
+.pictoAtouts
+{
+   max-height: 6em;
+}
+
+.pictoAtoutsPerso
+{
+    width: 100%;
+}
+
+section .atoutsContent
+{
+    background-size: cover;
+    background-position: center;
+}
+/* Section : skills END*/
+
+/* Section : Time Line */
+.timeLine
+{
+    min-height: 100vh;
+    background-color: var(--or);
+    padding: 100px 0;
+}
+
+.timeline
+{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after
+{
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: var(--grisF);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.timeline-item
+{
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd)
+{
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even)
+{
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-content
+{
+    background: var(--grisF);
+    padding: 15px;
+    border-radius: 35px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.timeline-content h4
+{
+    margin-bottom: 5px;
+    color: var(--beige);
+    font-size: 1.6rem;
+}
+
+/* ------------------- */
+/*     Responsive      */
+/* ------------------- */
+@media (max-width: 768px)
+{
+
+    .timeline
+    {
+        max-width: 100%;
+        padding-left: 30px;
+    }
+
+    .timeline::after
+    {
+        left: 20px; /* Ligne à gauche */
+        margin-left: 0;
+    }
+
+    .timeline-item
+    {
+        width: 100%; /* Full width */
+        padding-left: 50px; /* Espace pour la ligne */
+        text-align: left !important; /* Uniformise */
+        left: 0 !important; /* Enlève l'alternance */
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even)
+    {
+        text-align: left !important;
+    }
+
+    .timeline-content
+    {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .timeline-content img
+    {
+        margin: 10px 0;
+    }
+}
+/* Section : Time Line END*/
+
+/* Section : Maintenance */
+.maintenance
+{
+    min-height: 100vh;
+    background-color: var(--or);
+    padding: 100px 0;
+}
+
+.boxWeb
+{
+    background-color: var(--brun);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+article li
+{
+    font-size: 1.2em;
+}
+/* Section : Maintenance END*/
+
+/* Section : Hébergement */
+.hosting
+{
+    min-height: 100vh;
+    background-color: var(--or);
+    padding: 00px 0;
+}
+
+/* ------------------- */
+/*     Responsive      */
+/* ------------------- */
+
+@media (max-width: 576px)
+{
+    .maintenance img,
+    .hosting img
+    {
+        display: none !important;
+    }
+}
+/* Section : Hébergement END*/
+
+/* Section : Trust */
+.trustSection
+{
+    min-height: 100vh;
+    background-color: var(--or);
+}
+
+section .trustBox
+{
+    background-color: var(--vert);
+    border-radius: 500px;
+    margin-top: 12% !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    gap: 0px;
+}
+
+.logo-container
+{
+    width: 300px; /* Ajuste la largeur du conteneur */
+    height: 250px; /* Ajuste la hauteur du conteneur */
+    position: relative;
+}
+
+.logo
+{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.logo.active
+{
+    opacity: 1;
+}
+/* Section : Trust END*/
