@@ -278,6 +278,7 @@ span.mainTitleHome:after
     font-size: clamp(1rem, 3vw + 1rem, 2.5rem);
     font-weight: normal;
     font-family: 'Dastin';
+    display: flex;
 }
 /* END Home */
 

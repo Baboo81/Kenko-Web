@@ -19,9 +19,9 @@
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-12 text-center mainContent">
                     <span class="mainTitleHome"></span>
-                    <p class="secondTitle">
+                    <h1 class="secondTitle">
                         {{ $homeData['home']['banner'] ?? '' }}
-                    </p>
+                    </h1>
                 </div>
             </div>
         </div>
@@ -39,9 +39,9 @@
         <div class="containter">
             <div class="row">
                 <div class="p-5">
-                    <h1 class="text-center titleH1 mt-5">
+                    <h2 class="text-center titleH1 mt-5">
                         {{ $homeData['purposes']['main_Title'] ?? '' }}
-                    </h1>
+                    </h2>
                 </div>
                 <div class="row pictoBlocWeb justify-content-center mx-3 g-5">
                     @foreach (['article1', 'article2', 'article3'] as $tempPurposes)
@@ -68,9 +68,9 @@
         <div class="container">
             <div class="row">
                 <div class="my-5">
-                    <h1 class="text-center titleH1">
+                    <h2 class="text-center titleH1">
                         {{ $homeData['offers']['main_Title'] ?? '' }}
-                    </h1>
+                    </h2>
                 </div>
                 @foreach ($homeData['offers']['cards'] as $index => $offer)
                     <div class="col-xl-4 col-xxl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 my-5">
@@ -91,7 +91,7 @@
                             <div class="popup-container" id="popup{{ $index + 1 }}">
                                 <div class="popup">
                                     <h4 class="fs-3 my-3">{{ $offer['popup']['title'] }}</h4>
-                                    <img src="{{ asset($offer['popup']['img']) ?? '' }}" alt="">
+                                    <img src="{{ asset($offer['popup']['img']) ?? '' }}" alt="Image représentant un personnage devant un ordinateur">
                                     <p class="text-start my-3">{{ $offer['popup']['intro'] }}</p>
                                     <ul class="text-start">
                                         @foreach ($offer['popup']['items'] as $item)
@@ -121,9 +121,9 @@
         <div class="container">
             <div class="row">
                 <div class="my-5">
-                    <h1 class="text-center titleH1">
+                    <h2 class="text-center titleH1">
                         {{ $homeData['skills']['main_Title'] ?? '' }}
-                    </h1>
+                    </h2>
                 </div>
                 {{-- Bloc : img --}}
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
@@ -155,9 +155,9 @@
         <div class="container">
             <div class="row">
                 <div class="my-5">
-                    <h1 class="text-center titleH1">
+                    <h2 class="text-center titleH1">
                         {{ $homeData['timeline']['main_Title'] ?? '' }}
-                    </h1>
+                    </h2>
                 </div>
             </div>
             <section class="container py-5">
@@ -183,9 +183,9 @@
         <div class="container">
             <div class="row p-2">
                 <div class="text-center my-5">
-                    <h1 class="titleH1">
+                    <h2 class="titleH1">
                         {{ $homeData['maintenance']['main_Title'] ?? '' }}
-                    </h1>
+                    </h2>
                 </div>
 
                 <div class="boxWeb rounded-5 p-5 d-flex flex-wrap justify-content-center">
@@ -230,9 +230,9 @@
         <div class="container">
             <div class="row p-2">
                 <div class="text-center my-5">
-                    <h1 class="titleH1">
+                    <h2 class="titleH1">
                         {{ $homeData['hosting']['main_Title'] ?? '' }}
-                    </h1>
+                    </h2>
                 </div>
 
                 <div class="boxWeb rounded-5 p-5 d-flex flex-wrap justify-content-center">
@@ -243,8 +243,8 @@
                             d-none d-sm-flex
                             align-items-center justify-content-center
                             order-md-1 order-lg-2">
-                        <img src="{{ $kenkoWebData['hosting']['img'] ?? '' }}"
-                            alt="{{ $kenkoWebData['hosting']['alt'] ?? '' }}" class="img-fluid w-100"
+                        <img src="{{ $homeData['hosting']['img'] ?? '' }}"
+                            alt="{{ $homeData['hosting']['alt'] ?? '' }}" class="img-fluid w-100"
                             style="object-fit:cover;">
                     </div>
 

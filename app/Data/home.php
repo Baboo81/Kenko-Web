@@ -2,10 +2,10 @@
 
 return [
     'home' => [
-        'banner' => "L'agence web à caractère humain",
+        'banner' => "Agence web spécialisée en création de sites internet et en développement web",
     ],
     'purposes' => [
-        'main_Title' => "Ce que vous propose Kenko-Web",
+        'main_Title' => "Ce que vous propose votre agence web, Kenko-Web",
         'article1' => [
             'sub_Title' => "Un accompagnement de qualité",
             'txt' => "Je suis à votre écoute et je vous conseille tout au long de la vie du site",

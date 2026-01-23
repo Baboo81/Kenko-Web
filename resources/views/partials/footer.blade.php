@@ -41,7 +41,7 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; Kenko-web - 2025</p>
+        <p>&copy; Kenko-web - 2026</p>
     </div>
 </footer>
 
