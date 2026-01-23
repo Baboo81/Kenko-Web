@@ -13,7 +13,7 @@
                             href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Qui suis-je ?</a>
+                        <a class="nav-link" href="{{ route('qui-suis-je') }}">Qui suis-je ?</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>

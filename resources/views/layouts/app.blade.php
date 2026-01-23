@@ -4,9 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Kenko Web – Développement web & solutions digitales')</title>
+    <title>@yield('title', 'Kenko-Web | Agence web & développement web')</title>
     <meta name="description" content="@yield('meta_description', 'Développement web sur mesure avec Laravel, SEO et performance.')">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:description" content="@yield('meta_description')">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('assets/img/og-image.jpg') }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title')">
+    <meta name="twitter:description" content="@yield('meta_description')">
+    <meta name="twitter:image" content="{{ asset('assets/img/og-image.jpg') }}">
 
     {{-- Bootstrap CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -45,9 +60,6 @@
     {{-- Leaflet JS --}}
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-o9N1j7kP5QkQ4M4xj8M2JvY6kKpG5N6k6p+JQk5vY=" crossorigin=""></script>
-
-    {{-- Vite --}}
-    @vite(['resources/js/main.js', 'resources/js/app.js'])
 
     {{-- Scripts spécifiques --}}
     @stack('scripts')

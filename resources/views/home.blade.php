@@ -4,6 +4,10 @@
     @vite('resources/css/home.css')
 @endpush
 
+@section('title', 'Agence web Waterloo | Création de sites internet – Kenko-Web')
+
+@section('meta_description', 'Kenko-Web est une agence web à Waterloo spécialisée en création de sites internet, développement web et accompagnement digital.')
+
 @section('content')
     {{-- Div animation : progression de la page --}}
     <div id="scroll-indicator">
