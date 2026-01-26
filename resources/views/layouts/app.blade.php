@@ -33,7 +33,7 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
     {{-- Vite --}}
-    @vite(['resources/css/app.css', 'resources/css/navigation.css', 'resources/css/footer.css', 'resources/js/main.js', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/navigation.css', 'resources/css/footer.css', 'resources/js/main.js', 'resources/js/blobs-animations.js', 'resources/js/app.js'])
 
     {{-- Styles spécifiques --}}
     @stack('styles')

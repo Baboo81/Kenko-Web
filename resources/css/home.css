@@ -318,7 +318,7 @@ span.mainTitleHome:after
 {
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: grayscale(100%) brightness(0.8);
-    max-width: 350px;
+    max-width: 600px;
     margin-bottom: 1rem;
 }
 
@@ -369,7 +369,7 @@ span.mainTitleHome:after
 {
     min-height: 100vh;
     background-color: var(--or);
-    padding: 100px 0;
+    padding: 200px 0;
 }
 
 .card
