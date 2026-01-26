@@ -28,7 +28,7 @@ return [
         [
             'title' => "Site simple",
             'price' => "Á partir de 800€",
-            'img' => "/assets/img/cards/siteSimple.jpg",
+            'img' => "/assets/img/cards/siteSimple.webp",
             'alt' => "Image représentant une maison au milieu d'un champ",
             'text' => "Un site simple est constitué d'une page sur laquelle figurera une présentation de vos prestations, tarifs, informations pratiques (SEO inclus).",
             'popup' => [
@@ -46,7 +46,7 @@ return [
         [
             'title' => "Site vitrine",
             'price' => "Á partir de 1600€",
-            'img' => "/assets/img/cards/siteVitrine.jpg",
+            'img' => "/assets/img/cards/siteVitrine.webp",
             'alt' => "Image représentant une boulangerie",
             'text' => "Un site vitrine comprend 5 à 7 pages grâce auxquelles les internautes pourront découvrir votre activité. Avec un site vitrine, vous dévoilerez plus de détails sur les différentes facettes de votre activité.",
             'popup' => [
@@ -62,7 +62,7 @@ return [
         [
             'title' => "Site XXL",
             'price' => "Á partir de 2500€",
-            'img' => "/assets/img/cards/siteXXL2.jpg",
+            'img' => "/assets/img/cards/siteXXL2.webp",
             'alt' => "Image représentant des buissons",
             'text' => "Un site XXL se compose de 8 à 12 pages ou plus. Les internautes auront une vision approfondie de vos activités.",
             'popup' => [
