@@ -29,8 +29,7 @@
 
 
     {{-- Leaflet CSS --}}
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     {{-- Vite --}}
     @vite(['resources/css/app.css', 'resources/css/navigation.css', 'resources/css/footer.css', 'resources/js/main.js', 'resources/js/blobs-animations.js', 'resources/js/app.js'])
@@ -58,8 +57,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     {{-- Leaflet JS --}}
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-o9N1j7kP5QkQ4M4xj8M2JvY6kKpG5N6k6p+JQk5vY=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     {{-- Scripts spécifiques --}}
     @stack('scripts')

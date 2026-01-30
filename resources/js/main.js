@@ -79,10 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener('DOMContentLoaded', () => {
     const mapContainer = document.getElementById('mapid');
 
-    // On sort proprement si le footer n'est pas présent
     if (!mapContainer || typeof L === 'undefined') return;
-
-    // Empêcher toute double initialisation
     if (mapContainer._leaflet_id) return;
 
     const map = L.map(mapContainer).setView([50.71036, 4.36889], 16);
@@ -92,5 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }).addTo(map);
 
     L.marker([50.71036, 4.36889]).addTo(map);
+
+    // ✅ Forcer Leaflet à recalculer la taille après que le div soit visible
+    setTimeout(() => map.invalidateSize(), 200);
 });
+
 

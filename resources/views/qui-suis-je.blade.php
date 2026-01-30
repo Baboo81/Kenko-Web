@@ -38,8 +38,11 @@
             @foreach ($quiSuisJeData['sections'] as $section)
                 <div class="my-5">
                     <h1 class="text-center titleH1 my-5 fs-1 fontBlack">
-                        {{ $section['title'] }}
+                        {{ $section['title'] ?? '' }}
                     </h1>
+                    <h3 class="text-center my-5">
+                        {{ $section['sub_title'] ?? '' }}
+                    </h3>
                 </div>
                 <div class="row text-center my-5 pictoBloc">
                     @foreach ($section['items'] as $item)
