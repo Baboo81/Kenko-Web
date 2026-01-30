@@ -6,8 +6,8 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse show" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}" aria-current="page"
                             href="{{ route('home') }}">Home</a>

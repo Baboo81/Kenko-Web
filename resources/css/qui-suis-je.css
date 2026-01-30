@@ -25,6 +25,98 @@
     --noir : #282828;
 }
 
+/* BTN */
+button, .button
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    padding: 0 20px;
+    border: 1px solid var(--beige);
+    border-radius: 24px;
+    background-color: var(--grisF);
+    color: var(--beige);
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    white-space: nowrap;
+}
+
+button:hover, .button:hover
+{
+    background-color: var(--brun);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+@media (max-width: 576px)
+{
+    .button
+    {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
+/* BTN END*/
+
+/* Indicateur de progression */
+
+#scroll-indicator
+{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: conic-gradient(gray 0%, transparent 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: background 0.3s ease;
+}
+
+/* Cercle intérieur pour l'effet de "remplissage circulaire" */
+.inner-circle
+{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: var(--beige);
+  border-radius: 50%;
+}
+
+.scroll-arrow
+{
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: gray;
+  animation: blink 1.2s infinite;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes blink
+{
+  0%, 100%
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%
+  {
+    opacity: 0.3;
+    transform: translateY(3px);
+  }
+}
+/* END */
 
 html, body
 {
