@@ -40,25 +40,25 @@ return [
             'items' => [
                 [
                     'label' => "La programmation",
-                    'img' => "assets/img/quiSuisJe/santé.svg",
+                    'img' => "assets/img/quiSuisJe/code.svg",
                     'alt' => "Picto représentant la santé",
                     'max_width' => "120px"
                 ],
                 [
                     'label' => "Le web",
-                    'img' => "assets/img/quiSuisJe/reiki.svg",
+                    'img' => "assets/img/quiSuisJe/web.svg",
                     'alt' => "Picto représentant le Reiki",
                     'max_width' => "136px"
                 ],
                 [
                     'label' => "La cyber-sécurité",
-                    'img' => "assets/img/quiSuisJe/aroma.svg",
+                    'img' => "assets/img/quiSuisJe/cyberSecurite.svg",
                     'alt' => "Picto représentant l'aromathérapie",
                     'max_width' => "73px"
                 ],
                 [
                     'label' => "Les technologies numériques",
-                    'img' => "assets/img/quiSuisJe/coaching.svg",
+                    'img' => "assets/img/quiSuisJe/techNum.svg",
                     'alt' => "Picto représentant le coaching",
                     'max_width' => "106px"
                 ],
