@@ -24,6 +24,11 @@ class ContactController extends Controller
     //Traitement du formulaire
     public function send(Request $request)
     {
+        //HoneyPot (anti-spam)
+        if ($request->filled('website')) {
+            return back()->with('error', 'Spam détecté !');
+        }
+
         //Validation des champs
         $validated = $request->validate([
             'lastname' => ['required', 'string', 'max:255'],
@@ -31,6 +36,9 @@ class ContactController extends Controller
             'email' => ['required', 'email'],
             'message' => ['required', 'string'],
         ]);
+
+        //Nettoyage XSS
+        $validated['message'] = strip_tags($validated['message']);
 
         //Enregistrement ds la DB
         Contact::create($validated);

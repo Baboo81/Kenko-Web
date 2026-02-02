@@ -10,7 +10,7 @@ return [
     ],
     'title' => "Contactez Kenko Web",
     'illustration' => [
-        'src' => "asset/img/contact-illustration.webp",
+        'src' => "assets/img/contact/contact.svg",
         'alt' => "Illustration contact Kenko Web",
     ],
     'fields' => [

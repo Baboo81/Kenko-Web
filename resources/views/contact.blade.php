@@ -39,6 +39,9 @@
                         novalidate>
                         @csrf
 
+                        {{-- HoneyPot --}}
+                        <input type="text" name="website" style="display:none">
+
                         {{-- Champs de base --}}
                         @foreach ($contactData['fields'] as $field)
                             <div class="mb-3">
