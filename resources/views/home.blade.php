@@ -93,7 +93,7 @@
                             <img src="{{ asset($offer['img']) ?? '' }}" class="card-img-top rounded-top-5"
                                 alt="{{ $offer['alt'] }}">
                             <div class="card-body d-flex flex-column text-center">
-                                <h5 class="card-title text-center fs-3 my-3">{{ $offer['title'] }}</h5>
+                                <h5 class="card-title text-muted text-center fs-3 my-3">{{ $offer['title'] }}</h5>
                                 <h6 class="fontBolded fs-5 my-3">{{ $offer['price'] }}</h6>
                                 <p class="card-text">{{ $offer['text'] }}</p>
                                 <div class="button-container mt-auto justify-content-center">
