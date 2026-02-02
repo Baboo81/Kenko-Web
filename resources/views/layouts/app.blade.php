@@ -42,6 +42,9 @@
     {{-- Nav --}}
     @include('partials.navigation')
 
+    {{-- Cookies : banner --}}
+    @include('partials.cookies')
+
     {{-- Contenu principal --}}
     <main>
         @yield('content')
