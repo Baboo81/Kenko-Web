@@ -40,14 +40,19 @@ class ContactController extends Controller
         //Nettoyage XSS
         $validated['message'] = strip_tags($validated['message']);
 
-        //Enregistrement ds la DB
+        //Enregistrement ds la DB avec protection SQL injection
         Contact::create($validated);
 
         //Envoi du mail
-        Mail::send('email.contact', $validated, function ($mail) use ($validated) {
+        Mail::send('email.contact', [
+            'lastname' => $validated['lastname'],
+            'firstname' => $validated['firstname'],
+            'email' => $validated['email'],
+            'user_message' => $validated['message'],
+        ], function ($mail) use ($validated) {
             $mail->to('info@kenko-web.be')
                  ->subject('Nouveau message - Kenko-Web')
-                 ->replyTo($validated['email'], $validated['firstname'].' '.$validated['lastname']);
+                 ->replyTo($validated['email'], $validated['firstname'] . ' ' . $validated['lastname']);
         });
 
         //Redirection avec un msg flash
