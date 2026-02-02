@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     {{-- Vite --}}
-    @vite(['resources/css/app.css', 'resources/css/navigation.css', 'resources/css/footer.css', 'resources/js/main.js', 'resources/js/blobs-animations.js', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/navigation.css', 'resources/css/footer.css', 'resources/css/home.css', 'resources/css/contact', 'resources/css/qui-suis-je.css',  'resources/js/main.js', 'resources/js/blobs-animations.js', 'resources/js/app.js'])
 
     {{-- Styles spécifiques --}}
     @stack('styles')
