@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Mail;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -17,5 +19,30 @@ class ContactController extends Controller
          * On retourne la vue contact
          */
         return view('contact', compact('contactData'));
+    }
+
+    //Traitement du formulaire
+    public function send(Request $request)
+    {
+        //Validation des champs
+        $validated = $request->validate([
+            'lastname' => ['required', 'string', 'max:255'],
+            'firstname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email'],
+            'message' => ['required', 'string'],
+        ]);
+
+        //Enregistrement ds la DB
+        Contact::create($validated);
+
+        //Envoi du mail
+        Mail::send('email.contact', $validated, function ($mail) use ($validated) {
+            $mail->to('info@kenko-web.be')
+                 ->subject('Nouveau message - Kenko-Web')
+                 ->replyTo($validated['email'], $validated['firstname'].' '.$validated['lastname']);
+        });
+
+        //Redirection avec un msg flash
+        return back()->with('success', 'Merci pour votre message, je vous répondrai rapidement ');
     }
 }
