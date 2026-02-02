@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @push('styles')
-    @vite('resources/css/home.css')
+    @vite([
+        'resources/css/reset.css',
+        'resources/css/home.css',
+    ])
 @endpush
 
 @section('title', 'Agence web Waterloo | Création de sites internet – Kenko-Web')

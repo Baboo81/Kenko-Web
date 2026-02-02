@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @push('styles')
-    @vite('resources/css/qui-suis-je.css')
+    @vite([
+        'resources/css/qui-suis-je.css',
+        'resources/css/contact.css',
+    ])
 @endpush
 
 @section('title', $quiSuisJeData['sections'][0]['meta_title'] ?? 'Kenko-Web')
