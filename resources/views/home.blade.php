@@ -26,7 +26,7 @@
     <section class="home">
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-12 text-center mainContent">
+                <div class="col-lg-12 mainContent">
                     <span class="mainTitleHome"></span>
                     <h1 class="secondTitle">
                         {{ $homeData['home']['banner'] ?? '' }}
@@ -48,7 +48,7 @@
         <div class="containter">
             <div class="row">
                 <div class="p-5">
-                    <h2 class="text-center titleH1 mt-5">
+                    <h2 class="text-center fs-2 titleEffect mt-5">
                         {{ $homeData['purposes']['main_Title'] ?? '' }}
                     </h2>
                 </div>
@@ -83,7 +83,7 @@
         <div class="container">
             <div class="row">
                 <div class="my-5">
-                    <h2 class="text-center titleH1 mb-5">
+                    <h2 class="text-center fs-2 titleEffect mb-5">
                         {{ $homeData['offers']['main_Title'] ?? '' }}
                     </h2>
                 </div>
@@ -137,7 +137,7 @@
         <div class="container">
             <div class="row">
                 <div class="my-5">
-                    <h2 class="text-center titleH1">
+                    <h2 class="text-center fs-2 titleEffect">
                         {{ $homeData['skills']['main_Title'] ?? '' }}
                     </h2>
                 </div>
@@ -171,7 +171,7 @@
         <div class="container">
             <div class="row">
                 <div class="my-5">
-                    <h2 class="text-center titleH1">
+                    <h2 class="text-center fs-2 titleEffect">
                         {{ $homeData['timeline']['main_Title'] ?? '' }}
                     </h2>
                 </div>
@@ -199,7 +199,7 @@
         <div class="container">
             <div class="row p-2">
                 <div class="text-center my-5">
-                    <h2 class="titleH1">
+                    <h2 class="fs-2 titleEffect">
                         {{ $homeData['maintenance']['main_Title'] ?? '' }}
                     </h2>
                 </div>
@@ -245,7 +245,7 @@
         <div class="container">
             <div class="row p-2">
                 <div class="text-center my-5">
-                    <h2 class="titleH1">
+                    <h2 class="fs-2 titleEffect">
                         {{ $homeData['hosting']['main_Title'] ?? '' }}
                     </h2>
                 </div>

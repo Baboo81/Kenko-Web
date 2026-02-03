@@ -34,9 +34,9 @@ html, body
     min-width: 320px;
 }
 
-.titleH1
+.titleEffect
 {
-    color: var(--vert);
+    color: var(--noir);
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 

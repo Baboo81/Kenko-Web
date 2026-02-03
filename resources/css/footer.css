@@ -70,7 +70,7 @@ footer.footer
 
 .footer-icon
 {
-  width: 300px;
+  width: 50px;
   filter: grayscale(0%) brightness(1);
   transition: filter 0.3s ease, transform 0.3s ease;
 }

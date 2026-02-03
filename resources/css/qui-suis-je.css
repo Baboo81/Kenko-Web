@@ -127,12 +127,6 @@ html, body
     min-width: 320px;
 }
 
-.titleH1
-{
-    color: var(--vert) !important;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-}
-
 .fontWhite
 {
     color: var(--beige);
