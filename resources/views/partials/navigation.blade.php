@@ -10,7 +10,7 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}" aria-current="page"
-                            href="{{ route('home') }}">Home</a>
+                            href="{{ route('home') }}">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('qui-suis-je') }}">Qui suis-je ?</a>
