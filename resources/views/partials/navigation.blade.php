@@ -3,6 +3,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('assets/img/logo/logoKenkoWeb.svg') }}" alt="Logo du site Kenko-Web" height="95">
+                <span class="visually-hidden">Kenko Web</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
