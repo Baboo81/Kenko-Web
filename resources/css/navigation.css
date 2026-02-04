@@ -29,9 +29,14 @@ nav
 
 .navbar-brand
 {
-    font-weight: bold;
-    color: var(--noir);
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img
+{
+    max-height: 95px;
+    width: auto;
 }
 
 nav .navbar-nav
