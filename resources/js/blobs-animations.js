@@ -21,7 +21,7 @@ gsap.to("#blob1", {
 
 //Blob 2 :
 gsap.to("#blob2", {
-    x: 1900,            // déplacement horizontal
+    x: -1900,            // déplacement horizontal
     scale: 1.2,         // pulse
     opacity: 0.2,       // opacité
     duration: 19.5,
