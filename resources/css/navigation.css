@@ -3,6 +3,7 @@
 ========================== */
 :root
 {
+    --bleu : #a2d4ed;
     --vert : #8ccece;
     --grisF : #8b9cb6;
     --gris : #c1c1c1;
@@ -19,8 +20,8 @@ nav
 {
     height: 120px;
     padding: 10px 20px;
-    opacity: 0.95;
     z-index: 9999;
+    background-color: var(--bleu);
 }
 
 .navbar

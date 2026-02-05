@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('assets/img/logo/logoKenkoWeb.svg') }}" alt="Logo du site Kenko-Web" height="95">

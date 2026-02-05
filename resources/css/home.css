@@ -397,10 +397,28 @@ span.mainTitleHome:after
 
 .card-body
 {
+    position: relative;
     background-image: url(../../public/assets/img/cards/backgroundCard.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.card-body::before
+{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(240,240,240,0.7); /* gris clair overlay */
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card-body > *
+{
+    position: relative;
+    z-index: 2;
 }
 
 .card
