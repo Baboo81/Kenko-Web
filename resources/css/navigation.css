@@ -20,6 +20,7 @@ nav
     height: 120px;
     padding: 10px 20px;
     opacity: 0.95;
+    z-index: 9999;
 }
 
 .navbar

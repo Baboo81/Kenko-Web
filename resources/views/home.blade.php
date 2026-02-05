@@ -72,13 +72,6 @@
     </section>
     {{-- Section : Purposes END --}}
 
-    {{-- Blob1 svg --}}
-    <div class="blob-container" style="position: relative; width: 100%; height: 400px; overflow: visible;">
-        <img src="{{ asset('assets/img/blobs/blob1.svg') }}" alt="blob1" id="blob1">
-        <img src="{{ asset('assets/img/blobs/blob2.svg') }}" alt="blob2" id="blob2">
-    </div>
-    {{-- blueBlob svg END --}}
-
     {{-- Section : Offers  --}}
     <section class="offers">
         <div class="container">

@@ -387,19 +387,6 @@ span.mainTitleHome:after
 }
 /* Section : purposes END*/
 
-/* blueBlob : animation */
-#blob1
-{
-    position: absolute;
-    top: 0;
-    left: -10;
-    width: 400px;
-    height: auto;
-    z-index: 1;
-    pointer-events: none; /*afin de ne pas bloquer les clics*/
-}
-/* blueBlob : animation END*/
-
 /* Section : offers*/
 .offers
 {
