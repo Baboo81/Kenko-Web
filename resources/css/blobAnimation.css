@@ -22,14 +22,8 @@
 {
     position: absolute;
     width: 300px;
-    opacity: 0.35;
-    filter: blur(60px);
 }
 
 /* Contenu normal */
-header, nav, main, footer, section.home, .card
-{
-    position: relative;
-    z-index: 2;        /* devant les blobs */
-}
+
 /* blueBlob : animation END*/
