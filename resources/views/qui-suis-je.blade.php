@@ -1,10 +1,7 @@
 @extends('layouts.app')
 
 @push('styles')
-    @vite([
-        'resources/css/qui-suis-je.css',
-        'resources/css/contact.css',
-    ])
+    @vite(['resources/css/qui-suis-je.css', 'resources/css/contact.css'])
 @endpush
 
 @section('title', $quiSuisJeData['sections'][0]['meta_title'] ?? 'Kenko-Web')
@@ -29,6 +26,10 @@
                         <img src="{{ asset('assets/img/quiSuisJe/quiSuisJe.svg') }}" alt="Photo me représentant"
                             class="img-fluid">
                     </div>
+                    <div class="profile-card mx-auto text-center my-5">
+                        <h2>Christel Rodriguez Perez</h2>
+                        <p>Votre développeuse web !</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,7 +51,7 @@
                 <div class="row text-center my-5 pictoBloc">
                     @foreach ($section['items'] as $item)
                         <article class="col-6 col-md-3 d-flex flex-column align-items-center mb-4">
-                            <img src="{{ asset($item['img'])?? ''}}" alt="{{ $item['alt'] }}" class="img-fluid"
+                            <img src="{{ asset($item['img']) ?? '' }}" alt="{{ $item['alt'] }}" class="img-fluid"
                                 style="max-width: {{ $item['max_width'] }};">
                             <h4 class="fs-4 my-3">
                                 {{ $item['label'] }}
@@ -73,7 +74,7 @@
                 <article class="col-md-12 my-5 p-5">
                     <div class="boxWhoIam text-center rounded-5 p-5">
                         <div class="col-md-12 d-flex align-items-center justify-content-center">
-                            <img src="{{ asset($quiSuisJeData['routeSection']['image']['src']) ?? ''}}"
+                            <img src="{{ asset($quiSuisJeData['routeSection']['image']['src']) ?? '' }}"
                                 alt="{{ $quiSuisJeData['routeSection']['image']['alt'] }}"
                                 style="height: {{ $quiSuisJeData['routeSection']['image']['height'] }};">
                         </div>

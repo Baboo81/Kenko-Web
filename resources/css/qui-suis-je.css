@@ -16,6 +16,7 @@
 
 :root
 {
+    --bleu : #a2d4ed;
     --vert : #8ccece;
     --grisF : #8b9cb6;
     --gris : #c1c1c1;
@@ -129,7 +130,7 @@ html, body
 
 .fontWhite
 {
-    color: var(--beige);
+    color: var(--grisF);
     font-size: 1.5rem;
     line-height: 1.5rem;
 }
@@ -146,7 +147,7 @@ html, body
     min-height: 100% !important;
     background-size: cover;
     background-position: center;
-    background-color: var(--brun);
+    background-color: var(--bleu);
     position: relative; /*pour les ajustements*/
 }
 
@@ -154,6 +155,38 @@ html, body
 {
     max-width: 100%;
     height: 50Vh !important;
+}
+
+
+.profile-card {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    opacity: 70%;
+}
+
+.profile-card h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.profile-card p {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #cccccc;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 /* END section qui suis-je ?*/
 
@@ -181,8 +214,9 @@ article img
 
 section .boxWhoIam
 {
-    background-color: var(--grisF);
+    background-color: var(--bleu);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    z-index: 999;
 }
 
 /* Media Queries */

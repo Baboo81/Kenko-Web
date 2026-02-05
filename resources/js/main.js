@@ -48,15 +48,15 @@ window.addEventListener('scroll', () => {
 //---------------------------
 // Cards-popup
 //---------------------------
-function showPopup(popupId) {
+window.showPopup = function (popupId) {
     const popup = document.getElementById(popupId);
     if (popup) popup.style.display = "flex";
-}
+};
 
-function closePopup(popupId) {
+window.closePopup = function (popupId) {
     const popup = document.getElementById(popupId);
     if (popup) popup.style.display = "none";
-}
+};
 
 // ----------------------------
 // Trust Section : logos animation
