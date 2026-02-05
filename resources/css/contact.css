@@ -25,6 +25,12 @@
     --noir : #282828;
 }
 
+.titleEffect
+{
+    color: var(--grisF);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
 html, body
 {
     background-color: var(--or);
