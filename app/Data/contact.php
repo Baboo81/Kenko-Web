@@ -33,7 +33,7 @@ return [
             'label' => "Adresse email",
             'type' => "email",
             'placeholder' => "Veuillez indiquer votre email",
-            'icon' => "bi-enveloppe",
+            'icon' => "bi-envelope",
         ],
     ],
     'message_field' => [

@@ -71,6 +71,11 @@ input::placeholder
     opacity: 0.6;
 }
 
+label
+{
+    color: var(--grisF);
+}
+
 /* Media Queries */
 
 
