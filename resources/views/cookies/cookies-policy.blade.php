@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@push('styles')
+    @vite([ 'resources/css/reset.css','resources/css/cookies-policy.css'])
+@endpush
+
 @section('title', 'Politique de cookies | Kenko-Web')
 @section('meta_description', 'Découvrez la politique de cookies de Kenko-Web et comment nous utilisons les cookies pour améliorer votre expérience.')
 
