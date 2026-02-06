@@ -5,12 +5,39 @@
 
 @section('content')
 <section class="container my-5">
-    <h1>Politique de cookies</h1>
-    <p>Nous utilisons des cookies pour :</p>
+   <h1>{{ $cookiesPolicy['heading'] }}</h1>
+    <p>{{ $cookiesPolicy['intro'] }}</p>
+
+    <h2>{{ $cookiesPolicy['purpose_intro'] }}</h2>
     <ul>
-        <li>Assurer le fonctionnement du site</li>
-        <li>Analyser le trafic et les pages visitées</li>
+        @foreach($cookiesPolicy['purposes'] as $purpose)
+            <li>{{ $purpose }}</li>
+        @endforeach
     </ul>
-    <p>Vous pouvez choisir d’accepter ou refuser les cookies non essentiels.</p>
+
+    <p>{{ $cookiesPolicy['consent_note'] }}</p>
+
+    <h2>{{ $cookiesPolicy['philosophy_heading'] }}</h2>
+    <ul>
+        @foreach($cookiesPolicy['philosophy_points'] as $point)
+            <li>{{ $point }}</li>
+        @endforeach
+    </ul>
+
+    <h2>Cookies utilisés sur le site</h2>
+    <ul>
+        @foreach($cookiesPolicy['cookies_list'] as $cookie)
+            <li>
+                <strong>{{ $cookie['name'] }}</strong>
+                ({{ $cookie['category'] }}) : {{ $cookie['purpose'] }} – Durée : {{ $cookie['duration'] }}
+            </li>
+        @endforeach
+    </ul>
+
+    <p>{{ $cookiesPolicy['how_to_change'] }}</p>
+    <p>Pour en savoir plus sur la protection de vos données :
+        <a href="{{ $cookiesPolicy['privacy_link'] }}">Politique de confidentialité</a>
+        ou contactez-nous à <a href="mailto:{{ $cookiesPolicy['contact'] }}">{{ $cookiesPolicy['contact'] }}</a>.
+    </p>
 </section>
 @endsection

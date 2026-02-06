@@ -10,7 +10,7 @@ class FaqController extends Controller
     public function show(): View
     {
         /**
-        * Récuperation des datas depui : App/Data/faq.php
+        * Récuperation des datas depuis : App/Data/faq.php
         */
         $faqData = require app_path('Data/faq.php');
 
