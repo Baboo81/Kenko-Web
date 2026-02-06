@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CookieConsentController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuiSuisJeController;
@@ -19,3 +20,4 @@ Route::get('faq', [FaqController::class, 'show'])->name('faq');
 /* Cookies */
 /***********/
 Route::view('/cookies', 'cookies.cookies-policy')->name('cookies-policy');
+Route::post('/cookie-consent', [CookieConsentController::class, 'store'])->name('cookie-consent.store');
