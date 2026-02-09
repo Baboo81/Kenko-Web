@@ -497,9 +497,20 @@ span.mainTitleHome:after
     padding: 200px 0;
 }
 
+.skillsContent
+{
+    margin-left: 230px !important;
+}
+
+.skillsContent article
+{
+    margin-left: 20px;      /* décale tout l'article vers la droite */
+    margin-bottom: 1.5rem;
+}
+
 .skillsContent p
 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .blocAtouts
@@ -509,12 +520,13 @@ span.mainTitleHome:after
 
 .pictoAtouts
 {
-   max-height: 6em;
+   max-height: 8em;
 }
 
 .pictoAtoutsPerso
 {
-    width: 100%;
+    width: 140% !important;
+    max-width: auto;
     z-index: 999;
 }
 
@@ -522,6 +534,19 @@ section .atoutsContent
 {
     background-size: cover;
     background-position: center;
+}
+
+@media (min-width: 768px)
+{
+    .pictoAtoutsPerso
+    {
+        transform: translateX(50px); /* plus de décalage sur desktop */
+    }
+
+    .skillsContent article
+    {
+        margin-left: 30px;
+    }
 }
 /* Section : skills END*/
 
@@ -634,13 +659,13 @@ section .atoutsContent
 /* Section : Time Line END*/
 
 /* Section : Maintenance */
-h5
+h5.underline
 {
     position: relative;
     padding-bottom: 0.5rem;
 }
 
-h5::after
+h5.underline::after
 {
     content: '';
     display: block;

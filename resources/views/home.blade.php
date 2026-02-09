@@ -129,9 +129,9 @@
     {{-- Section : Skills --}}
     <section class="skills">
         <div class="container">
-            <div class="row">
+            <div class="row align-itams-center">
                 <div class="my-5">
-                    <h2 class="text-center fs-2 titleEffect">
+                    <h2 class="text-center my-5 fs-2 titleEffect">
                         {{ $homeData['skills']['main_Title'] ?? '' }}
                     </h2>
                 </div>
@@ -141,7 +141,7 @@
                         alt="Picto représentant deux personnages tenant un panneau">
                 </div>
                 {{-- Bloc : articles/pictos --}}
-                <div class="col-md-6 d-flex flex-column skillsContent">
+                <div class="col-md-3 d-flex flex-column justify-content-center skillsContent">
                     @foreach (['article1', 'article2', 'article3'] as $tempSkills)
                         @php
                             $article = $homeData['skills'][$tempSkills];
@@ -218,7 +218,7 @@
 
                             @foreach ($homeData['maintenance']['types'] as $type)
                                 <ul class="mx-3 my-4">
-                                    <h5 class="my-4">{{ $type['category'] }}</h5>
+                                    <h5 class="underline my-4">{{ $type['category'] }}</h5>
                                     @foreach ($type['items'] as $item)
                                         <li class="my-3">{{ $loop->iteration }}. {{ $item }}</li>
                                     @endforeach
@@ -262,7 +262,7 @@
 
                             @foreach ($homeData['hosting']['sections'] as $section)
                                 <div class="my-3">
-                                    <h5 class="my-3">{{ $section['title'] }}</h5>
+                                    <h5 class="underline my-3">{{ $section['title'] }}</h5>
                                     <p>{!! $section['txt'] !!}</p>
                                 </div>
                             @endforeach
