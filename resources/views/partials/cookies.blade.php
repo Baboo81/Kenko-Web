@@ -6,70 +6,48 @@
     </span>
 
     <div class="d-flex gap-2">
-        <button class="button" id="refuse-cookies">
-            Refuser
-        </button>
-
-        <button class="button" id="accept-cookies">
-            Accepter
-        </button>
+        <button class="button" id="refuse-cookies">Refuser</button>
+        <button class="button" id="accept-cookies">Accepter</button>
     </div>
 </div>
 
 <script>
-/*
-  Fonction pour créer un cookie côté navigateur.
-  name  = nom du cookie
-  value = valeur du cookie
-  days  = durée de vie en jours
-*/
-function setCookie(name, value, days) {
-    // Transforme les jours en secondes (max-age se mesure en secondes)
-    const maxAge = days * 24 * 60 * 60;
+document.addEventListener('DOMContentLoaded', function () {
 
-    // Crée le cookie avec le nom, la valeur, le chemin et la durée
-    // samesite=strict empêche le cookie d'être envoyé dans les requêtes cross-site
-    document.cookie = `${name}=${value}; path=/; max-age=${maxAge}; samesite=strict`;
-}
+    const banner = document.querySelector('.cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const refuseBtn = document.getElementById('refuse-cookies');
 
-/*
-  Fonction pour envoyer le choix de consentement au serveur via AJAX.
-  choice = 'accepted' ou 'refused'
-*/
-function sendConsent(choice) {
-    fetch('{{ route("cookie-consent.store") }}', {   // Appelle la route Laravel qui stocke le consentement
-        method: 'POST',                              // Méthode POST
-        headers: {
-            'Content-Type': 'application/json',      // Le corps est du JSON
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'    // Jeton CSRF pour sécuriser la requête
-        },
-        body: JSON.stringify({ consent: choice })    // Envoie le consentement au serveur
-    }).then(() => {
-        // Une fois la requête terminée, on enregistre aussi le consentement côté front
-        setCookie('cookies_consent', choice, 365);             // Cookie pour savoir si l'utilisateur a accepté ou refusé
-        setCookie('cookies_accepted', choice === 'accepted' ? '1' : '', 365); // Optionnel : 1 si accepté, vide sinon
+    function sendConsent(choice) {
+        // 1️⃣ Création du cookie côté navigateur (1 an)
+        document.cookie = `cookies_consent=${choice}; path=/; max-age=${60*60*24*365}; samesite=strict`;
 
-        // Cache la bannière immédiatement pour l'utilisateur
-        document.querySelector('.cookie-banner').style.display = 'none';
-    });
-}
+        // 2️⃣ Envoi au serveur pour stockage en DB
+        fetch('/cookie-consent', { // <-- URL relative, ne pas utiliser localhost:5173
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({
+                consent: choice,
+                page: window.location.pathname,
+                referrer: document.referrer
+            })
+        })
+        .then(res => {
+            if (!res.ok) {
+                console.error('Erreur lors de l’envoi du consentement', res.status);
+            }
+        })
+        .catch(err => console.error(err));
 
-/*
-  Événement pour le bouton "Accepter"
-  Quand l'utilisateur clique, on envoie 'accepted'
-*/
-document.getElementById('accept-cookies').addEventListener('click', function () {
-    sendConsent('accepted');
-});
+        // 3️⃣ Cacher immédiatement la bannière
+        if (banner) banner.style.display = 'none';
+    }
 
-/*
-  Événement pour le bouton "Refuser"
-  Quand l'utilisateur clique, on envoie 'refused'
-*/
-document.getElementById('refuse-cookies').addEventListener('click', function () {
-    sendConsent('refused');
+    if (acceptBtn) acceptBtn.addEventListener('click', () => sendConsent('accepted'));
+    if (refuseBtn) refuseBtn.addEventListener('click', () => sendConsent('refused'));
 });
 </script>
-
 @endif
-
