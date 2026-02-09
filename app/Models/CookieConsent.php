@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CookieConsent extends Model
 {
+    protected $table = 'cookie_consent';
+
     //Champ remplissable avec create()
     protected $fillable = ['consent', 'ip_address', 'user_agent', 'page', 'referrer'];
 }
