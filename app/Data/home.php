@@ -174,16 +174,16 @@ return [
                 'category' => "Maintenance évolutive",
                 'items' => [
                     "Ajouts ou modification de pages",
-                    "Changement de design ou d\'éléments graphiques",
+                    "Changement de design ou d'éléments graphiques",
                     "Mise en conformité RGPD (cookies, mentions légales ...)",
                 ],
             ],
             [
                 'category' => "Mise à jour du contenu",
                 'items' => [
-                    "Modification de textes, d\'images, de photos",
+                    "Modification de textes, d'images, de photos",
                     "Mise à jour des tarifs et fiches de produits",
-                    "Ajout d\'articles de blog",
+                    "Ajout d'articles de blog",
                 ],
             ],
         ],
@@ -232,6 +232,11 @@ return [
             [
                 'src' => "/assets/img/logo/imayah.svg",
                 'alt' => "Logo du site : Imayah"
+            ],
+            //aMME
+            [
+                'src' => "/assets/img/logo/aMME.svg",
+                'alt' => "Logo du site : Fiduciaire aMME"
             ],
         ],
     ],

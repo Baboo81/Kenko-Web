@@ -214,19 +214,18 @@
                     <div class="col-12 col-md-6 order-md-2 order-lg-2">
                         <article class="fontWhite">
                             <p class="text-center">{!! $homeData['maintenance']['intro'] !!}</p>
-                            <h4 class="text-center my-3">{{ $homeData['maintenance']['title'] }}</h4>
+                            <h4 class="text-center my-5">{{ $homeData['maintenance']['title'] }}</h4>
 
                             @foreach ($homeData['maintenance']['types'] as $type)
                                 <ul class="mx-3 my-4">
-                                    <h5>{{ $type['category'] }}</h5>
+                                    <h5 class="my-4">{{ $type['category'] }}</h5>
                                     @foreach ($type['items'] as $item)
-                                        <li class="my-2">{{ $loop->iteration }}. {{ $item }}</li>
+                                        <li class="my-3">{{ $loop->iteration }}. {{ $item }}</li>
                                     @endforeach
                                 </ul>
                             @endforeach
                         </article>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -259,11 +258,11 @@
                     {{-- TEXTE --}}
                     <div class="col-12 col-md-6 order-md-2 order-lg-1">
                         <article class="fontWhite">
-                            <p class="text-center">{!! $homeData['hosting']['intro'] !!}</p>
+                            <p class="text-center my-5">{!! $homeData['hosting']['intro'] !!}</p>
 
                             @foreach ($homeData['hosting']['sections'] as $section)
                                 <div class="my-3">
-                                    <h5 class="my-2">{{ $section['title'] }}</h5>
+                                    <h5 class="my-3">{{ $section['title'] }}</h5>
                                     <p>{!! $section['txt'] !!}</p>
                                 </div>
                             @endforeach

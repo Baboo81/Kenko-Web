@@ -22,6 +22,7 @@
     --or : #FFFFF0;
     --beige : #f1efe9;
     --brun : #e3c7af;
+    --rouge : #e8505b;
     --noir : #282828;
 }
 
@@ -89,6 +90,12 @@ h3
 {
     color: white;
     font-size: clamp(2rem, 5vw + 1rem, 6em);
+}
+
+h4
+{
+    color: var(--beige);
+    font-size: clamp(1rem, 2.5vw + .5rem, 1.8em);
 }
 
 h5
@@ -627,6 +634,25 @@ section .atoutsContent
 /* Section : Time Line END*/
 
 /* Section : Maintenance */
+h5
+{
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h5::after
+{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 1px;
+    background-color: var(--rouge);
+    margin: 0.5rem auto 0;
+    margin-top: 1.5rem;
+    margin-left: 0;
+
+}
+
 .maintenance
 {
     min-height: 100vh;
@@ -636,7 +662,7 @@ section .atoutsContent
 
 .boxWeb
 {
-    background-color: var(--brun);
+    background-color: var(--bleu);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     z-index: 999;
 }
@@ -644,6 +670,12 @@ section .atoutsContent
 article li
 {
     font-size: 1.2em;
+}
+
+ul li
+{
+    padding-left: 2rem;
+    text-indent: -1.5rem;
 }
 /* Section : Maintenance END*/
 
