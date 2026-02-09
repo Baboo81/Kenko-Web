@@ -7,6 +7,8 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuiSuisJeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 /********************/
 /* Routes globales */
@@ -21,4 +23,16 @@ Route::get('faq', [FaqController::class, 'show'])->name('faq');
 /* Cookies */
 /***********/
 Route::get('/cookies', [CookiesPolicyController::class, 'show'])->name('cookies-policy');
-Route::post('/cookie-consent', [CookieConsentController::class, 'store'])->name('cookie-consent.store');
+Route::post('/cookie-consent', function(Request $request) {
+    // Validation simple
+    $request->validate([
+        'consent' => 'required|string',
+        'page' => 'nullable|string',
+        'referrer' => 'nullable|string',
+    ]);
+
+    // Stockage en DB si tu veux (ou juste log pour test)
+    Log::info('Consentement cookies', $request->all());
+
+    return response()->json(['message' => 'Consentement enregistré !']);
+});
