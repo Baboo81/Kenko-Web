@@ -23,7 +23,7 @@
 
         {{-- SECTION KENKO WEB --}}
         <div class="my-5">
-            <div class="accordion rounded-5" id="accordionKenkoWeb">
+            <div class="accordion" id="accordionKenkoWeb">
                 @foreach ($faqData['kenkoWeb'] as $index => $item)
                 @php
                 $headingId = 'headingWeb' . $index;
