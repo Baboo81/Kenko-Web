@@ -128,6 +128,24 @@ html, body
     min-width: 320px;
 }
 
+h3
+{
+    font-size: clamp(.8rem, 2.3vw + .4rem, 2.2em);
+}
+
+h4
+{
+    color: var(--bleu);
+    font-size: clamp(1rem, 2.5vw + .5rem, 1.8em);
+    font-weight: bolder;
+}
+
+.titleEffect
+{
+    color: var(--grisF);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
 .fontWhite
 {
     color: var(--grisF);
@@ -210,6 +228,31 @@ article img
 {
     transform: scale(1.1);
     filter: grayscale(0%) brightness(1);
+}
+
+.picto-img
+{
+    width: 80px;      /* largeur fixe */
+    height: 80px;     /* hauteur fixe */
+    object-fit: contain; /* garde les proportions */
+}
+
+@media (min-width: 768px)
+{
+    .picto-img
+    {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .picto-img
+    {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 section .boxWhoIam

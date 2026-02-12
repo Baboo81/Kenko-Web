@@ -41,18 +41,17 @@
         <div class="container">
             @foreach ($quiSuisJeData['sections'] as $section)
                 <div class="my-5">
-                    <h1 class="text-center titleH1 my-5 fs-1 fontBlack">
+                    <h1 class="text-center titleEffect my-5 fs-1 fontBlack">
                         {{ $section['title'] ?? '' }}
                     </h1>
-                    <h3 class="text-center my-5">
+                    <h3 class="text-center titleEffect my-5">
                         {{ $section['sub_title'] ?? '' }}
                     </h3>
                 </div>
                 <div class="row text-center my-5 pictoBloc">
                     @foreach ($section['items'] as $item)
                         <article class="col-6 col-md-3 d-flex flex-column align-items-center mb-4">
-                            <img src="{{ asset($item['img']) ?? '' }}" alt="{{ $item['alt'] }}" class="img-fluid"
-                                style="max-width: {{ $item['max_width'] }};">
+                            <img src="{{ asset($item['img']) ?? '' }}" alt="{{ $item['alt'] }}" class="picto-img">
                             <h4 class="fs-4 my-3">
                                 {{ $item['label'] }}
                             </h4>
@@ -67,9 +66,9 @@
     {{-- Section : Route --}}
     <section class="route">
         <div class="container">
-            <h1 class="text-center fs-1 titleH1 my-5 p-5">
+            <h2 class="text-center fs-1 titleEffect my-5 p-5">
                 {{ $quiSuisJeData['routeSection']['title'] }}
-            </h1>
+            </h2>
             <div class="row d-flex align-items-center justify-content-center">
                 <article class="col-md-12 my-5 p-5">
                     <div class="boxWhoIam text-center rounded-5 p-5">

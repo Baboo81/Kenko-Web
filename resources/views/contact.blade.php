@@ -1,10 +1,7 @@
 @extends('layouts.app')
 
 @push('styles')
-    @vite([
-        'resources/css/reset.css',
-        'resources/css/contact.css',
-    ])
+    @vite(['resources/css/reset.css', 'resources/css/contact.css'])
 @endpush
 
 @section('title', $contactData['sections'][0]['meta_title'] ?? 'Kenko-Web')
@@ -13,11 +10,10 @@
 
 @section('content')
     <section class="contact my-5">
+        <h1 class="text-center fs-2 mb-5 titleEffect">
+            {{ $contactData['title'] }}
+        </h1>
         <div class="container">
-            <h1 class="text-center text-muted fs-2 mb-5 titleEffect">
-                {{ $contactData['title'] }}
-            </h1>
-
             {{-- Messages flash --}}
             @foreach (['success' => 'success', 'error' => 'danger'] as $key => $type)
                 @if (session($key))
@@ -28,7 +24,7 @@
                 @endif
             @endforeach
 
-            <div class="row align-items-center g-5">
+            <div class="row align-items-center my-5 g-5">
                 {{-- Illustration --}}
                 <div class="col-md-6 d-none d-md-flex justify-content-center">
                     <img src="{{ asset($contactData['illustration']['src']) ?? '' }}"

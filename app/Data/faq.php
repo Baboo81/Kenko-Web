@@ -26,7 +26,7 @@ return [
         ],
         [
             'question' => "Quelles technologies utilise votre webmaster ?",
-            'answer' => "Votre <strong>webmaster</strong> utilise CSS, HTML, PHP, JavaScript. Pour la création graphique (logo, icônes, illustrations...), Adobe Illustrator est utilisé."
+            'answer' => "Votre <strong>webmaster</strong> utilise les technologies suivante : Laravel, CSS, HTML, PHP, JavaScript. Pour la création graphique (logo, icônes, illustrations...), Adobe Illustrator est utilisé."
         ],
         [
             'question' => "Est-ce que le devis sera payant ?",
