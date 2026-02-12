@@ -87,9 +87,9 @@
                             <img src="{{ asset($offer['img']) ?? '' }}" class="card-img-top rounded-top-5"
                                 alt="{{ $offer['alt'] }}">
                             <div class="card-body d-flex flex-column text-center">
-                                <h5 class="card-title text-muted text-center fs-3 my-3">{{ $offer['title'] }}</h5>
+                                <h5 class="card-title fontGreen text-center fs-3 my-3">{{ $offer['title'] }}</h5>
                                 <h6 class="fontBolded fs-5 my-3">{{ $offer['price'] }}</h6>
-                                <p class="card-text">{{ $offer['text'] }}</p>
+                                <p class="card-text text-muted">{{ $offer['text'] }}</p>
                                 <div class="button-container mt-auto justify-content-center">
                                     <button onclick="showPopup('popup{{ $index + 1 }}')" class="my-3">À qui s'adresse
                                         cette offre ?</button>
@@ -175,7 +175,7 @@
                     @foreach ($homeData['timeline']['steps'] as $step)
                         <div class="timeline-item">
                             <div class="timeline-content text-center">
-                                <h4 class="fw-bold my-3">{{ $step['title'] ?? '' }}</h4>
+                                <h4 class="fw-bold fontWhite my-3">{{ $step['title'] ?? '' }}</h4>
                                 <img src="{{ asset($step['img'] ?? '') }}" alt="{{ $step['alt'] ?? '' }}"
                                     class="me-3 my-2" width="{{ $step['width'] ?? 60 }}">
                                 <p class="text-muted">{{ $step['text'] ?? '' }}</p>

@@ -30,7 +30,7 @@ return [
             'price' => "Á partir de 800€",
             'img' => "/assets/img/cards/siteSimple.webp",
             'alt' => "Image représentant une maison au milieu d'un champ",
-            'text' => "Un site simple est constitué d'une page sur laquelle figurera une présentation de vos prestations, tarifs, informations pratiques (SEO inclus).",
+            'text' => "Un site simple se compose d’une page unique présentant l’essentiel de votre activité : vos prestations, vos tarifs ainsi que vos informations pratiques. Idéal pour démarrer votre présence en ligne, ce format vous permet d’être visible rapidement sur le web tout en bénéficiant d’une optimisation SEO de base pour faciliter votre référencement.",
             'popup' => [
                 'title' => "Pourquoi choisir l'offre : site simple ?",
                 'intro' => "Vous désirez :",
@@ -48,7 +48,7 @@ return [
             'price' => "Á partir de 1600€",
             'img' => "/assets/img/cards/siteVitrine.webp",
             'alt' => "Image représentant une boulangerie",
-            'text' => "Un site vitrine comprend 5 à 7 pages grâce auxquelles les internautes pourront découvrir votre activité. Avec un site vitrine, vous dévoilerez plus de détails sur les différentes facettes de votre activité.",
+            'text' => "Le site vitrine comprend généralement entre 5 et 7 pages permettant aux internautes de découvrir votre univers en détail : présentation, services, réalisations, contact, etc. Cette formule est parfaite pour valoriser votre expertise, renforcer votre crédibilité et offrir une expérience complète à vos visiteurs.",
             'popup' => [
                 'title' => "Pourquoi choisir l'offre : site vitrine ?",
                 'intro' => "Vous désirez :",
@@ -64,7 +64,7 @@ return [
             'price' => "Á partir de 2500€",
             'img' => "/assets/img/cards/siteXXL2.webp",
             'alt' => "Image représentant des buissons",
-            'text' => "Un site XXL se compose de 8 à 12 pages ou plus. Les internautes auront une vision approfondie de vos activités.",
+            'text' => "Le site XXL s’adresse aux projets plus ambitieux, avec 8 à 12 pages (ou plus) pour présenter votre activité de manière approfondie. Il permet de développer chaque aspect de votre offre, d’intégrer des fonctionnalités avancées et de proposer un parcours utilisateur riche et structuré.",
             'popup' => [
                 'title' => "Pourquoi choisir l'offre : site XXL ?",
                 'intro' => "Cette option est adaptée si :",

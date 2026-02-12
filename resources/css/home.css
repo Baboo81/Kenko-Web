@@ -104,6 +104,16 @@ h5
     font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
 }
 
+.fontBolded
+{
+    font-weight: bolder;
+}
+
+.fontWhite
+{
+    color: #FFFFFF;
+}
+
 .fontBeige
 {
     color: var(--beige);
@@ -116,7 +126,7 @@ h5
 
 .fontGreen
 {
-  color: var(--vert);
+  color: var(--vert) !important;
 }
 
 .bg-grey
@@ -570,7 +580,7 @@ section .atoutsContent
     content: "";
     position: absolute;
     width: 4px;
-    background-color: var(--grisF);
+    background-color: var(--vert);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -600,7 +610,7 @@ section .atoutsContent
 
 .timeline-content
 {
-    background: var(--grisF);
+    background: var(--vert);
     padding: 15px;
     border-radius: 35px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
