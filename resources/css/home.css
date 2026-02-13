@@ -228,6 +228,7 @@ h6
     top: -160px;
     left: 250px;
     font-size: 15em !important;
+    color: #ffffff;
 }
 
 .secondTitle
@@ -235,6 +236,7 @@ h6
     position: relative;
     left: 35px;
     font-size: 1.8rem !important;
+    color: #ffffff;
 }
 
 /* Réduction du padding sur petits écrans */
