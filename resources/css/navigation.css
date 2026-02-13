@@ -111,7 +111,7 @@ nav .navbar-nav
 
 .navbar-toggler:hover
 {
-    background: var(--grisF);
+    background: var(--vert);
     transform: scale(1.05);
 }
 
@@ -184,9 +184,15 @@ nav .navbar-nav
 {
     .navbar-collapse
     {
-        background-color: var(--gris);
+        background-color: var(--vert);
         padding: 10px;
-        border-radius: 10px;
+        border-radius: 20px;
+    }
+
+    .navbar-nav
+    {
+        flex-direction: column !important;
+        align-items: center;
     }
 
     .nav-item
