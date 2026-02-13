@@ -16,6 +16,13 @@
                 class="img-fluid imgHero">
         </div>
     </section>
+
+     <!-- SVG WAVE -->
+    <svg class="waveWebFaq" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true" role="img">
+        <path d="M0,32 C200,120 400,0 720,48 C1040,96 1240,0 1440,48 L1440 120 L0 120 Z" fill="#FFFFF0"></path>
+    </svg>
+
     <div class="container faq">
         <h1 class="fs-1 titleEffect my-5 p-5">
             {{ $faqData['titles']['main_Title'] ?? '' }}

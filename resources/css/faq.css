@@ -37,8 +37,9 @@ html, body
 
 .hero
 {
+    position: relative;
     background-color: var(--bleu);
-    z-index: 9999 !important;
+    z-index: 99;
 }
 
 .imgHero
@@ -46,6 +47,18 @@ html, body
     height: 600px;
     width: auto;
 }
+
+/* Wave */
+.waveWebFaq
+{
+  display:block;
+  position: relative;
+  width:100%;
+  height:80px;
+  top: -90px;
+  z-index: 1000;
+}
+/* Wave END*/
 
 .titleEffect
 {

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @push('styles')
-    @vite([ 'resources/css/reset.css','resources/css/qui-suis-je.css'])
+@vite([ 'resources/css/reset.css','resources/css/qui-suis-je.css'])
 @endpush
 
 @section('title', $quiSuisJeData['sections'][0]['meta_title'] ?? 'Kenko-Web')
@@ -9,93 +9,106 @@
 @section('meta_description', $quiSuisJeData['sections'][0]['meta_description'] ?? 'Agence web à Waterloo')
 
 @section('content')
-    {{-- Div animation : progression de la page --}}
-    <div id="scroll-indicator">
-        <div class="inner-circle">
-            <div class="scroll-arrow"></div>
-        </div>
+{{-- Div animation : progression de la page --}}
+<div id="scroll-indicator">
+    <div class="inner-circle">
+        <div class="scroll-arrow"></div>
     </div>
-    {{-- Div animation : progression de la page END --}}
+</div>
+{{-- Div animation : progression de la page END --}}
 
-    {{-- Section : WhoIam --}}
-    <section class="whoIam">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="d-flex justify-items-center justify-content-center">
+{{-- Section : WhoIam --}}
+<section class="whoIam">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-items-center justify-content-center">
+                    <div class="whoiam-visual">
+                        {{-- Image de fond --}}
                         <img src="{{ asset('assets/img/quiSuisJe/quiSuisJe.svg') }}" alt="Photo me représentant"
                             class="img-fluid">
+
+                        {{-- Photo superposée --}}
+                        <img src="{{ asset('assets/img/quiSuisJe/dev.webp') }}" alt="Portrait du developpeur"
+                            class="whoiam-photo">
                     </div>
-                    <div class="profile-card mx-auto text-center my-5">
-                        <h2>Christel Rodriguez Perez</h2>
-                        <p>Votre développeuse web !</p>
-                    </div>
+                </div>
+                <div class="profile-card mx-auto text-center my-5">
+                    <h2>Christel Rodriguez Perez</h2>
+                    <p>Votre développeuse web !</p>
                 </div>
             </div>
         </div>
-    </section>
-    {{-- Section : WhoIam END --}}
+    </div>
+</section>
+{{-- Section : WhoIam END --}}
 
-    {{-- Section : Qui suis-je ? --}}
-    <section class="quiSuisJe my-5">
-        <div class="container">
-            @foreach ($quiSuisJeData['sections'] as $section)
-                <div class="my-5">
-                    <h1 class="text-center titleEffect my-5 fs-1 fontBlack">
-                        {{ $section['title'] ?? '' }}
-                    </h1>
-                    <h3 class="text-center titleEffect my-5">
-                        {{ $section['sub_title'] ?? '' }}
-                    </h3>
-                </div>
-                <div class="row text-center my-5 pictoBloc">
-                    @foreach ($section['items'] as $item)
-                        <article class="col-6 col-md-3 d-flex flex-column align-items-center mb-4">
-                            <img src="{{ asset($item['img']) ?? '' }}" alt="{{ $item['alt'] }}" class="picto-img">
-                            <h4 class="fs-4 my-3">
-                                {{ $item['label'] }}
-                            </h4>
-                        </article>
-                    @endforeach
-                </div>
+<!-- SVG WAVE -->
+<svg class="waveWeb" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true" role="img">
+    <path d="M0,32 C200,120 400,0 720,48 C1040,96 1240,0 1440,48 L1440 120 L0 120 Z" fill="#FFFFF0"></path>
+</svg>
+
+{{-- Section : Qui suis-je ? --}}
+<section class="quiSuisJe my-5">
+    <div class="container">
+        @foreach ($quiSuisJeData['sections'] as $section)
+        <div class="my-5">
+            <h1 class="text-center titleEffect my-5 fs-1 fontBlack">
+                {{ $section['title'] ?? '' }}
+            </h1>
+            <h3 class="text-center titleEffect my-5">
+                {{ $section['sub_title'] ?? '' }}
+            </h3>
+        </div>
+        <div class="row text-center my-5 pictoBloc">
+            @foreach ($section['items'] as $item)
+            <article class="col-6 col-md-3 d-flex flex-column align-items-center mb-4">
+                <img src="{{ asset($item['img']) ?? '' }}" alt="{{ $item['alt'] }}" class="picto-img">
+                <h4 class="fs-4 my-3">
+                    {{ $item['label'] }}
+                </h4>
+            </article>
             @endforeach
         </div>
-    </section>
-    {{-- Section : Qui suis-je ? END --}}
+        @endforeach
+    </div>
+</section>
+{{-- Section : Qui suis-je ? END --}}
 
-    {{-- Section : Route --}}
-    <section class="route">
-        <div class="container">
-            <h2 class="text-center fs-1 titleEffect my-5 p-5">
-                {{ $quiSuisJeData['routeSection']['title'] }}
-            </h2>
-            <div class="row d-flex align-items-center justify-content-center">
-                <article class="col-md-12 my-5 p-5">
-                    <div class="boxWhoIam text-center rounded-5 p-5">
-                        <div class="col-md-12 d-flex align-items-center justify-content-center">
-                            <img src="{{ asset($quiSuisJeData['routeSection']['image']['src']) ?? '' }}"
-                                alt="{{ $quiSuisJeData['routeSection']['image']['alt'] }}"
-                                style="height: {{ $quiSuisJeData['routeSection']['image']['height'] }};">
-                        </div>
-
-                        @foreach ($quiSuisJeData['routeSection']['paragraphs'] as $paragraph)
-                            <p class="fontWhite my-3">
-                                {{ $paragraph }}
-                            </p>
-                        @endforeach
-
-                        <div class="text-center my-5">
-                            <a href="{{ $quiSuisJeData['routeSection']['button']['url'] }}" target="_blank"
-                                rel="noopener noreferrer">
-                                <button class="button">
-                                    {{ $quiSuisJeData['routeSection']['button']['text'] }}
-                                </button>
-                            </a>
-                        </div>
+{{-- Section : Route --}}
+<section class="route">
+    <div class="container">
+        <h2 class="text-center fs-1 titleEffect my-5 p-5">
+            {{ $quiSuisJeData['routeSection']['title'] }}
+        </h2>
+        <div class="row d-flex align-items-center justify-content-center">
+            <article class="col-md-12 my-5 p-5">
+                <div class="boxWhoIam text-center rounded-5 p-5">
+                    <div class="col-md-12 d-flex align-items-center justify-content-center">
+                        <img src="{{ asset($quiSuisJeData['routeSection']['image']['src']) ?? '' }}"
+                            alt="{{ $quiSuisJeData['routeSection']['image']['alt'] }}"
+                            style="height: {{ $quiSuisJeData['routeSection']['image']['height'] }};">
                     </div>
-                </article>
-            </div>
+
+                    @foreach ($quiSuisJeData['routeSection']['paragraphs'] as $paragraph)
+                    <p class="fontWhite my-3">
+                        {{ $paragraph }}
+                    </p>
+                    @endforeach
+
+                    <div class="text-center my-5">
+                        <a href="{{ $quiSuisJeData['routeSection']['button']['url'] }}" target="_blank"
+                            rel="noopener noreferrer">
+                            <button class="button">
+                                {{ $quiSuisJeData['routeSection']['button']['text'] }}
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </article>
         </div>
-    </section>
-    {{-- Section : Route END --}}
+    </div>
+</section>
+{{-- Section : Route END --}}
 @endsection

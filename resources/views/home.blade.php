@@ -52,7 +52,7 @@
                         {{ $homeData['purposes']['main_Title'] ?? '' }}
                     </h2>
                 </div>
-                <div class="row pictoBlocWeb justify-content-center">
+                <div class="row pictoBlocWeb d-flex flex-row align-items-center justify-content-center">
                     @foreach (['article1', 'article2', 'article3'] as $tempPurposes)
                         @php $articles = $homeData['purposes'][$tempPurposes] @endphp
                         <article class="col-xl-4 col-xxl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
