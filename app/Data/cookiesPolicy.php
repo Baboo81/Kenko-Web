@@ -64,7 +64,6 @@ return [
     | Informations RGPD & contact
     |--------------------------------------------------------------------------
     */
-    'privacy_link' => '/privacy-policy', // lien vers la politique de confidentialité
     'contact' => 'info@kenko-web.be', // email pour questions RGPD
 
     /*

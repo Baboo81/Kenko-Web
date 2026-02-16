@@ -9,27 +9,27 @@
 
 @section('content')
 <section class="container my-5 cookies-policy">
-   <h1 class="titleEffect text-center my-5 fs-3">{{ $cookiesPolicy['heading'] }}</h1>
-    <p>{{ $cookiesPolicy['intro'] }}</p>
+   <h1 class="titleEffect text-center my-5 fs-2">{{ $cookiesPolicy['heading'] }}</h1>
+    <p class="style-p">{{ $cookiesPolicy['intro'] }}</p>
 
-    <h2>{{ $cookiesPolicy['purpose_intro'] }}</h2>
-    <ul>
+    <h2 class="titleEffect fs-4 my-3">{{ $cookiesPolicy['purpose_intro'] }}</h2>
+    <ul class="style-p">
         @foreach($cookiesPolicy['purposes'] as $purpose)
             <li>{{ $purpose }}</li>
         @endforeach
     </ul>
 
-    <p>{{ $cookiesPolicy['consent_note'] }}</p>
+    <p class="style-p">{{ $cookiesPolicy['consent_note'] }}</p>
 
-    <h2>{{ $cookiesPolicy['philosophy_heading'] }}</h2>
-    <ul>
+    <h2 class="titleEffect fs-4 my-3">{{ $cookiesPolicy['philosophy_heading'] }}</h2>
+    <ul class="style-p">
         @foreach($cookiesPolicy['philosophy_points'] as $point)
             <li>{{ $point }}</li>
         @endforeach
     </ul>
 
-    <h2>Cookies utilisés sur le site</h2>
-    <ul>
+    <h2 class="titleEffect fs-4 my-3">Cookies utilisés sur le site</h2>
+    <ul class="style-p">
         @foreach($cookiesPolicy['cookies_list'] as $cookie)
             <li>
                 <strong>{{ $cookie['name'] }}</strong>
@@ -38,10 +38,9 @@
         @endforeach
     </ul>
 
-    <p>{{ $cookiesPolicy['how_to_change'] }}</p>
-    <p>Pour en savoir plus sur la protection de vos données :
-        <a href="{{ $cookiesPolicy['privacy_link'] }}">Politique de confidentialité</a>
-        ou contactez-nous à <a href="mailto:{{ $cookiesPolicy['contact'] }}">{{ $cookiesPolicy['contact'] }}</a>.
+    <p class="style-p">{{ $cookiesPolicy['how_to_change'] }}</p>
+    <p class="style-p">Pour en savoir plus sur la protection de vos données :
+        contactez-nous par mail : <a href="mailto:{{ $cookiesPolicy['contact'] }}">{{ $cookiesPolicy['contact'] }}</a>.
     </p>
 </section>
 @endsection
