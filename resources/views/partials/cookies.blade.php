@@ -13,57 +13,121 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const banner = document.querySelector('.cookie-banner');
-            const acceptBtn = document.getElementById('accept-cookies');
-            const refuseBtn = document.getElementById('refuse-cookies');
+<script>
+/**
+ * ============================================================
+ *  Cookie Banner Manager
+ *  Gère :
+ *   - Affichage / masquage bannière
+ *   - Stockage consentement (cookie)
+ *   - Envoi consentement au serveur (Laravel)
+ * ============================================================
+ */
 
-            // 🔐 Token CSRF depuis app.blade.php
-            const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+function initCookieBanner() {
 
-            // Fonction pour lire un cookie
-            function getCookie(name) {
-                return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
-            }
+    // Sélection des éléments DOM
+    const banner   = document.querySelector('.cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const refuseBtn = document.getElementById('refuse-cookies');
 
-            if (getCookie('cookies_consent')) {
-                banner.style.display = 'none';
-            }
+    // Sécurité : si bannière absente → stop script
+    if (!banner) return;
 
-            // Si le cookie existe déjà, on cache la bannière
-            if (getCookie('cookies_consent')) {
-                if (banner) banner.style.display = 'none';
-            }
+    /**
+     * Masque visuellement la bannière
+     * (Bootstrap utilise d-flex → on le retire aussi)
+     */
+    function hideBanner() {
+        banner.classList.add('d-none');
+        banner.classList.remove('d-flex');
+    }
 
-            function sendConsent(choice) {
-                // Créer le cookie côté navigateur (1 an)
-                document.cookie = `cookies_consent=${choice}; path=/; max-age=${60*60*24*365}; SameSite=Strict`;
+    /**
+     * Récupère la valeur d’un cookie
+     */
+    function getCookie(name) {
+        return document.cookie
+            .split('; ')
+            .find(row => row.startsWith(name + '='))
+            ?.split('=')[1];
+    }
 
-                // Envoyer au serveur
-                fetch("{{ url('/cookie-consent') }}", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                            "X-CSRF-TOKEN": token,
-                            "Accept": "application/json"
-                        },
-                        body: JSON.stringify({
-                            consent: choice,
-                            page: window.location.pathname,
-                            referrer: document.referrer
-                        })
-                    })
-                    .then(res => res.json())
-                    .then(data => console.log("Consentement enregistré ID :", data.id ?? 'non défini'))
-                    .catch(err => console.error(err));
+    /**
+     * Définit le cookie de consentement
+     * Durée : 1 an
+     */
+    function setCookie(choice) {
+        document.cookie =
+            `cookies_consent=${choice}; path=/; max-age=${60 * 60 * 24 * 365}`;
+    }
 
-                // Cacher immédiatement la bannière
-                if (banner) banner.style.display = "none";
-            }
+    /**
+     * Envoie le consentement :
+     *  - Stocke cookie
+     *  - Cache bannière
+     *  - Log serveur (Laravel)
+     */
+    function sendConsent(choice) {
 
-            acceptBtn.addEventListener("click", () => sendConsent("accepted"));
-            refuseBtn.addEventListener("click", () => sendConsent("refused"));
+        // Stockage local
+        setCookie(choice);
+
+        // Masquage UI
+        hideBanner();
+
+        // Envoi backend
+        fetch("{{ url('/cookie-consent') }}", {
+            method: "POST",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRF-TOKEN": document
+                    .querySelector('meta[name="csrf-token"]')
+                    ?.getAttribute("content"),
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                consent: choice,
+                page: window.location.pathname,
+                referrer: document.referrer
+            })
+        })
+        .catch(() => {
+            // Silencieux en prod
+            // (on ne bloque pas l’UX si erreur log)
         });
-    </script>
+    }
+
+    /**
+     * Si consentement déjà donné → on cache direct
+     */
+    if (getCookie('cookies_consent')) {
+        hideBanner();
+    }
+
+    /**
+     * Events boutons
+     */
+    acceptBtn?.addEventListener('click',
+        () => sendConsent('accepted'));
+
+    refuseBtn?.addEventListener('click',
+        () => sendConsent('refused'));
+}
+
+
+/**
+ * DOM Ready Safe
+ * Lance le script même si chargé après le DOM
+ */
+if (document.readyState === 'loading') {
+    document.addEventListener(
+        'DOMContentLoaded',
+        initCookieBanner
+    );
+} else {
+    initCookieBanner();
+}
+</script>
 @endif
