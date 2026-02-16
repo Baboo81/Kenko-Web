@@ -8,8 +8,8 @@
 @section('meta_description', 'Découvrez la politique de cookies de Kenko-Web et comment nous utilisons les cookies pour améliorer votre expérience.')
 
 @section('content')
-<section class="container my-5">
-   <h1>{{ $cookiesPolicy['heading'] }}</h1>
+<section class="container my-5 cookies-policy">
+   <h1 class="titleEffect text-center my-5 fs-3">{{ $cookiesPolicy['heading'] }}</h1>
     <p>{{ $cookiesPolicy['intro'] }}</p>
 
     <h2>{{ $cookiesPolicy['purpose_intro'] }}</h2>

@@ -1,15 +1,22 @@
+@push('styles')
+@vite(['resources/css/reset.css', 'resources/css/cookies-banner.css'])
+@endpush
+
 @if (true)
     {{-- On affiche toujours la bannière, JS s’occupe de la cacher si cookie présent --}}
-    <div
-        class="cookie-banner bg-light p-3 fixed-bottom d-flex flex-column flex-md-row justify-content-between align-items-center shadow">
+    <div class="cookie-banner p-3 fixed-bottom d-flex flex-column flex-md-row justify-content-between align-items-center shadow">
         <span class="mb-2 mb-md-0">
-            Ce site utilise des cookies à des fins statistiques.
+            🍪 Ce site utilise des cookies anonymes pour analyser la fréquentation et améliorer l’expérience utilisateur.
             <a href="{{ route('cookies-policy') }}?from={{ url()->current() }}">En savoir plus</a>
         </span>
 
         <div class="d-flex gap-2">
             <button class="button" id="refuse-cookies">Refuser</button>
             <button class="button" id="accept-cookies">Accepter</button>
+        </div>
+
+        <div class="cookie-icon">
+            <img src="{{ asset('assets/img/cookies/cookies.svg') }}" alt="Image représentant des cookies">
         </div>
     </div>
 

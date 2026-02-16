@@ -1,0 +1,55 @@
+:root
+{
+    --bleu : #a2d4ed;
+    --vert : #8ccece;
+    --grisF : #8b9cb6;
+    --gris : #c1c1c1;
+    --or : #FFFFF0;
+    --beige : #f1efe9;
+    --brun : #e3c7af;
+    --rouge : #e8505b;
+    --noir : #282828;
+}
+
+.cookie-banner
+{
+    position: fixed !important; /* fixe en bas de l'écran */
+    bottom: 0;       /* au bas de la fenêtre */
+    left: 0;
+    width: 100% !important;     /* prend toute la largeur */
+    background-color: var(--brun);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    z-index: 9999 !important;
+}
+
+.cookie-icon
+{
+    position: absolute;
+    top: -5rem;          /* distance depuis le haut de la bannière ou de la page */
+    left: 70rem;         /* distance depuis la gauche */
+    width: 10rem;        /* taille du picto */
+    height: 10rem;
+}
+
+.cookie-icon img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px)
+{
+    .cookie-icon
+    {
+        top: -2rem;
+        left: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+    }
+}

@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     {{-- Vite --}}
-    @vite(['resources/css/app.css', 'resources/css/navigation.css', 'resources/css/footer.css', 'resources/css/home.css', 'resources/css/contact.css', 'resources/css/qui-suis-je.css', 'resources/css/faq.css', 'resources/css/reset.css', 'resources/css/blobAnimation.css', 'resources/css/cookies-policy.css',  'resources/js/main.js', 'resources/js/blobs-animations.js', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/navigation.css', 'resources/css/footer.css', 'resources/css/home.css', 'resources/css/contact.css', 'resources/css/qui-suis-je.css', 'resources/css/faq.css', 'resources/css/reset.css', 'resources/css/blobAnimation.css', 'resources/css/cookies-policy.css','resources/css/cookies-banner.css',  'resources/js/main.js', 'resources/js/blobs-animations.js', 'resources/js/app.js'])
 
     {{-- Styles spécifiques --}}
     @stack('styles')
