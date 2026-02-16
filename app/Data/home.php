@@ -13,7 +13,7 @@ return [
         ],
         'article2' => [
             'sub_Title' => "La liberté de choix",
-            'txt' => "Votre site web vous appartient, modifiez-le à votre guise ou confiez-moi cette mission !",
+            'txt' => "Je reste disponible pour assurer les mises à jour et évolutions selon vos besoins.",
             'img' => "/assets/img/pictos/liberté.svg",
         ],
         'article3' => [

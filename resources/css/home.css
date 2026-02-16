@@ -343,11 +343,18 @@ span.mainTitleHome:after
 /* Section : purposes*/
 .purposes
 {
+    position: relative;
     padding: 200px 0;
     overflow: visible;
+    z-index: 999;
 }
 
 /* Titres et textes */
+.pictoBlocWeb
+{
+    margin-left: 2%;
+}
+
 .pictoBlocWeb h4
 {
     font-weight: 700;

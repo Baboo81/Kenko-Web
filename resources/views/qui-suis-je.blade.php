@@ -93,7 +93,7 @@
 
                     @foreach ($quiSuisJeData['routeSection']['paragraphs'] as $paragraph)
                     <p class="fontWhite my-3">
-                        {{ $paragraph }}
+                        {!! $paragraph !!}
                     </p>
                     @endforeach
 

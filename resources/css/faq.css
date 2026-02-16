@@ -68,7 +68,9 @@ html, body
 
 .accordion
 {
+    position: relative;
     border-radius: 40% !important;
+    z-index: 999;
 }
 
 .accordion-title
