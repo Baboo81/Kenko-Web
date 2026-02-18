@@ -85,7 +85,7 @@
         <div class="row d-flex align-items-center justify-content-center">
             <article class="col-md-12 my-5 p-5">
                 <div class="boxWhoIam text-center rounded-5 p-5">
-                    <div class="col-md-12 d-flex align-items-center justify-content-center">
+                    <div class="col-md-12 d-flex align-items-center justify-content-center p-2">
                         <img src="{{ asset($quiSuisJeData['routeSection']['image']['src']) ?? '' }}"
                             alt="{{ $quiSuisJeData['routeSection']['image']['alt'] }}"
                             style="height: {{ $quiSuisJeData['routeSection']['image']['height'] }};">

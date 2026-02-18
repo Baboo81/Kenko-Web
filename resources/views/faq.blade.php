@@ -30,7 +30,7 @@
 
         {{-- SECTION KENKO WEB --}}
         <div class="my-5">
-            <div class="accordion" id="accordionKenkoWeb">
+            <div class="accordion p-2" id="accordionKenkoWeb">
                 @foreach ($faqData['kenkoWeb'] as $index => $item)
                 @php
                 $headingId = 'headingWeb' . $index;
@@ -62,7 +62,7 @@
             {{ $faqData['contact']['title'] ?? '' }}
         </h2>
         <div class="row d-flex flex-wrap justify-content-center align-items-center contactContent">
-            <section class="col-md-8 rounded-5 p-5 contactUs d-flex justify-content-center align-items-center">
+            <section class="col-12 rounded-5 p-5 contactUs d-flex justify-content-center align-items-center">
             {{-- Illustration --}}
             <div class="col-md-4 d-flex align-items-center justify-content-center">
                 <img src="{{ $faqData['contact']['illustration']['src'] }}"

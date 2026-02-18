@@ -155,15 +155,13 @@ h4
 
 .quiSuisJe
 {
-    position: relative;
     min-height: 100vh;
     padding: 200px 0;
-    z-index: 999;
 }
 
 .whoIam
 {
-    padding: 0;
+    inset: 0;
     min-height: 100% !important;
     background-size: cover;
     background-position: center;
