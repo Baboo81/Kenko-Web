@@ -25,10 +25,10 @@
     {{-- Section : Banner --}}
     <section class="home">
         <div class="container h-100">
-            <div class="row h-100 justify-content-center align-items-center">
+            <div class="row h-100 d-flex flex-column align-items-center justify-content-center">
                 <div class="col-lg-12 mainContent">
                     <span class="mainTitleHome"></span>
-                    <h1 class="secondTitle">
+                    <h1 class="secondTitle my-5">
                         {{ $homeData['home']['banner'] ?? '' }}
                     </h1>
                 </div>

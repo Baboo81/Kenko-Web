@@ -70,8 +70,9 @@ return [
                 'intro' => "Cette option est adaptée si :",
                 'img' => "/assets/img/pictos/imgPopup.svg",
                 'items' => [
-                    "Vous proposez un large panel d'activités.",
-                    "Vous avez beaucoup de concurrence et souhaitez un référencement plus poussé.",
+                    "Vous proposez de nombreuses activités ou services à présenter.",
+                    "Vous souhaitez intégrer une boutique en ligne performante.",
+                    "Vous évoluez dans un marché concurrentiel et visez un référencement avancé.",
                     ],
                 ],
             ],
