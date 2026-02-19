@@ -130,24 +130,24 @@
     <section class="skills">
         <div class="container">
             <div class="row align-itams-center">
-                <div class="my-5">
-                    <h2 class="text-center my-5 fs-2 titleEffect">
+                <div class="col-12 text-center my-5">
+                    <h2 class="my-5 fs-2 titleEffect">
                         {{ $homeData['skills']['main_Title'] ?? '' }}
                     </h2>
                 </div>
                 {{-- Bloc : img --}}
-                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="col-12 col-md-6 d-flex justify-content-center mb-4 mb-md-0">
                     <img src="/assets/img/pictos/atouts.svg" class="pictoAtoutsPerso"
                         alt="Picto représentant deux personnages tenant un panneau">
                 </div>
                 {{-- Bloc : articles/pictos --}}
-                <div class="col-md-3 d-flex flex-column justify-content-center skillsContent">
+                <div class="col-12 col-md-6 skillsContent">
                     @foreach (['article1', 'article2', 'article3'] as $tempSkills)
                         @php
                             $article = $homeData['skills'][$tempSkills];
                         @endphp
-                        <article class="text-center">
-                            <img src="{{ asset($article['img']) ?? '' }}" class="pictoAtouts"
+                        <article class="text-center text-md-center">
+                            <img src="{{ asset($article['img']) ?? '' }}" class="pictoAtouts my-3"
                                 alt="{{ $article['text'] }}">
                             <p class="text-muted p-1">
                                 {{ $article['text'] ?? '' }}

@@ -210,7 +210,7 @@ h6
     position: relative;
     background-image: url('../../public/assets/img/home/landing.svg');
     background-size: cover;
-    background-position: 50% 90%;
+    background-position: center;
     background-repeat: no-repeat;
     background-color: var(--bleu);
     overflow: hidden;
@@ -225,7 +225,7 @@ h6
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.20);
+    background: rgba(0, 0, 0, 0.10);
     z-index: 1;
 }
 
@@ -525,62 +525,70 @@ span.mainTitleHome:after
 {
     min-height: 50vh;
     background-color: var(--or);
-    padding: 200px 0;
+    padding: 120px 0; /* moins violent mobile */
 }
 
+/* Content bloc */
 .skillsContent
 {
-    margin-left: 230px !important;
+    margin-left: 0; /* reset mobile */
 }
 
+/* Articles */
 .skillsContent article
 {
-    position: relative;
-    margin-left: 20px;      /* décale tout l'article vers la droite */
     margin-bottom: 1.5rem;
-    z-index: 999;
 }
 
+/* Texte */
 .skillsContent p
 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
-.blocAtouts
-{
-    margin-top: 10%;
-}
-
+/* Pictos */
 .pictoAtouts
 {
-   max-height: 4em;
+    max-height: 4em;
 }
 
+/* Image principale */
 .pictoAtoutsPerso
 {
-    width: 140% !important;
-    max-width: auto;
-    z-index: 999;
+    width: 100%;
+    max-width: 500px;
 }
 
-section .atoutsContent
-{
-    background-size: cover;
-    background-position: center;
-}
-
+/* ===== Desktop ===== */
 @media (min-width: 768px)
 {
-    .pictoAtoutsPerso
+
+    .skills
     {
-        transform: translateX(50px); /* plus de décalage sur desktop */
+        padding: 200px 0;
+    }
+
+    .skillsContent
+    {
+        padding-left: 60px;
     }
 
     .skillsContent article
     {
-        margin-left: 30px;
+        text-align: left;
+    }
+
+    .pictoAtoutsPerso
+    {
+        transform: translateX(50px);
+    }
+
+    .skillsContent p
+    {
+        font-size: 1.5rem;
     }
 }
+
 /* Section : skills END*/
 
 /* Section : Time Line */

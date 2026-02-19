@@ -23,62 +23,62 @@ return [
         ],
     ],
     'offers' => [
-    'main_Title' => "Les offres personnalisables sur devis",
-    'cards' => [
-        [
-            'title' => "Site simple",
-            'price' => "Á partir de 800€",
-            'img' => "/assets/img/cards/siteSimple.webp",
-            'alt' => "Image représentant une maison au milieu d'un champ",
-            'text' => "Un site simple se compose d’une page unique présentant l’essentiel de votre activité : vos prestations, vos tarifs ainsi que vos informations pratiques. Idéal pour démarrer votre présence en ligne, ce format vous permet d’être visible rapidement sur le web tout en bénéficiant d’une optimisation SEO de base pour faciliter votre référencement.",
-            'popup' => [
-                'title' => "Pourquoi choisir l'offre : site simple ?",
-                'intro' => "Vous désirez :",
-                'img' => "/assets/img/pictos/imgPopup.svg",
-                'items' => [
-                    "Un site web qui contient simplement les informations essentielles",
-                    "Un référencement de qualité (SEO)",
-                    "Un design simple et efficace",
-                ],
-                'outro' => "Un site simple pourrait être une alternative temporaire avant de passer à un site multi-pages.",
-            ],
-        ],
-        [
-            'title' => "Site vitrine",
-            'price' => "Á partir de 1600€",
-            'img' => "/assets/img/cards/siteVitrine.webp",
-            'alt' => "Image représentant une boulangerie",
-            'text' => "Le site vitrine comprend généralement entre 5 et 7 pages permettant aux internautes de découvrir votre univers en détail : présentation, services, réalisations, contact, etc. Cette formule est parfaite pour valoriser votre expertise, renforcer votre crédibilité et offrir une expérience complète à vos visiteurs.",
-            'popup' => [
-                'title' => "Pourquoi choisir l'offre : site vitrine ?",
-                'intro' => "Vous désirez :",
-                'img' => "/assets/img/pictos/imgPopup.svg",
-                'items' => [
-                    "Mettre en avant un catalogue de produits, une galerie photos, vos partenaires...",
-                    "Présenter votre entreprise grâce à des contenus personnalisés.",
+        'main_Title' => "Les offres personnalisables sur devis",
+        'cards' => [
+            [
+                'title' => "Site simple",
+                'price' => "Á partir de 800€",
+                'img' => "/assets/img/cards/siteSimple.webp",
+                'alt' => "Image représentant une maison au milieu d'un champ",
+                'text' => "Un site simple se compose d’une page unique présentant l’essentiel de votre activité : vos prestations, vos tarifs ainsi que vos informations pratiques. Idéal pour démarrer votre présence en ligne, ce format vous permet d’être visible rapidement sur le web tout en bénéficiant d’une optimisation SEO de base pour faciliter votre référencement.",
+                'popup' => [
+                    'title' => "Pourquoi choisir l'offre : site simple ?",
+                    'intro' => "Vous désirez :",
+                    'img' => "/assets/img/pictos/imgPopup.svg",
+                    'items' => [
+                        "Un site web qui contient simplement les informations essentielles",
+                        "Un référencement de qualité (SEO)",
+                        "Un design simple et efficace",
+                    ],
+                    'outro' => "Un site simple pourrait être une alternative temporaire avant de passer à un site multi-pages.",
                 ],
             ],
-        ],
-        [
-            'title' => "Site XXL",
-            'price' => "Á partir de 2500€",
-            'img' => "/assets/img/cards/siteXXL2.webp",
-            'alt' => "Image représentant des buissons",
-            'text' => "Le site XXL s’adresse aux projets plus ambitieux, avec 8 à 12 pages (ou plus) pour présenter votre activité de manière approfondie. Il permet de développer chaque aspect de votre offre, d’intégrer des fonctionnalités avancées et de proposer un parcours utilisateur riche et structuré.",
-            'popup' => [
-                'title' => "Pourquoi choisir l'offre : site XXL ?",
-                'intro' => "Cette option est adaptée si :",
-                'img' => "/assets/img/pictos/imgPopup.svg",
-                'items' => [
-                    "Vous proposez de nombreuses activités ou services à présenter.",
-                    "Vous souhaitez intégrer une boutique en ligne performante.",
-                    "Vous évoluez dans un marché concurrentiel et visez un référencement avancé.",
+            [
+                'title' => "Site vitrine",
+                'price' => "Á partir de 1600€",
+                'img' => "/assets/img/cards/siteVitrine.webp",
+                'alt' => "Image représentant une boulangerie",
+                'text' => "Le site vitrine comprend généralement entre 5 et 7 pages permettant aux internautes de découvrir votre univers en détail : présentation, services, réalisations, contact, etc. Cette formule est parfaite pour valoriser votre expertise, renforcer votre crédibilité et offrir une expérience complète à vos visiteurs.",
+                'popup' => [
+                    'title' => "Pourquoi choisir l'offre : site vitrine ?",
+                    'intro' => "Vous désirez :",
+                    'img' => "/assets/img/pictos/imgPopup.svg",
+                    'items' => [
+                        "Mettre en avant un catalogue de produits, une galerie photos, vos partenaires...",
+                        "Présenter votre entreprise grâce à des contenus personnalisés.",
+                    ],
+                ],
+            ],
+            [
+                'title' => "Site XXL",
+                'price' => "Á partir de 2500€",
+                'img' => "/assets/img/cards/siteXXL2.webp",
+                'alt' => "Image représentant des buissons",
+                'text' => "Le site XXL s’adresse aux projets plus ambitieux, avec 8 à 12 pages (ou plus) pour présenter votre activité de manière approfondie. Il permet de développer chaque aspect de votre offre, d’intégrer des fonctionnalités avancées et de proposer un parcours utilisateur riche et structuré.",
+                'popup' => [
+                    'title' => "Pourquoi choisir l'offre : site XXL ?",
+                    'intro' => "Cette option est adaptée si :",
+                    'img' => "/assets/img/pictos/imgPopup.svg",
+                    'items' => [
+                        "Vous proposez de nombreuses activités ou services à présenter.",
+                        "Vous souhaitez intégrer une boutique en ligne performante.",
+                        "Vous évoluez dans un marché concurrentiel et visez un référencement avancé.",
                     ],
                 ],
             ],
         ],
     ],
-     'skills' => [
+    'skills' => [
         'main_Title' => "Les atouts de votre site",
         'img_content' => "/assets/img/pictos/atouts.svg",
         'alt' => "Picto représentant deux personnages tenant un panneau",
@@ -197,7 +197,8 @@ return [
         'sections' => [
             [
                 'title' => "Gestion du domaine et du certificat SSL",
-                'txt' => "Si vous n'avez pas encore de nom de domaine, je peux m'occuper de son achat et de son renouvellement.<br />Le certificat SSL est inclus pour sécuriser les échanges de données sur votre site.",
+                'txt' => "Si vous ne disposez pas encore de nom de domaine, je peux prendre en charge son achat, sa configuration ainsi que son renouvellement. Le certificat SSL est inclus afin de sécuriser les échanges de données et garantir une navigation fiable sur votre site. Je travaille exclusivement avec l’hébergeur o2switch, dont les serveurs sont localisés en France, un atout supplémentaire pour la performance, la conformité des données et le référencement naturel.",
+
             ],
             [
                 'title' => "Sécurité et maintenance",
