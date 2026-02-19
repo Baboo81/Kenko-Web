@@ -57,6 +57,20 @@ nav .navbar-nav
     margin: 0 15px;
 }
 
+
+/* ==========================
+   ACTIVE LINK
+========================== */
+.active-link {
+    color: var(--rouge) !important; /* Couleur texte active */
+    font-weight: 600;
+}
+
+.active-link::after {
+    transform: translateX(-50%) scaleX(1); /* underline visible */
+    background-color: var(--rouge);       /* underline même couleur */
+}
+
 .nav-link
 {
     position: relative;

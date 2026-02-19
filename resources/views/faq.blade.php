@@ -9,6 +9,14 @@
 @section('meta_description', $contactData['sections'][0]['meta_description'] ?? 'Agence web à Waterloo')
 
 @section('content')
+ {{-- Div animation : progression de la page --}}
+    <div id="scroll-indicator">
+        <div class="inner-circle">
+            <div class="scroll-arrow"></div>
+        </div>
+    </div>
+{{-- Div animation : progression de la page END --}}
+
 <section class="text-center">
     <section class="hero">
         <div class="mx-auto mb-5">

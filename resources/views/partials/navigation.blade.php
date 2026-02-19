@@ -12,17 +12,31 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}" aria-current="page"
-                            href="{{ route('home') }}">Accueil</a>
+                        <a href="{{ route('home') }}"
+                            class="nav-link {{ request()->routeIs('home') ? 'active-link' : '' }}" aria-current="page">
+                            Accueil
+                        </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('qui-suis-je') }}">Qui suis-je ?</a>
+                        <a href="{{ route('qui-suis-je') }}"
+                            class="nav-link {{ request()->routeIs('qui-suis-je') ? 'active-link' : '' }}">
+                            Qui suis-je ?
+                        </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                        <a href="{{ route('contact') }}"
+                            class="nav-link {{ request()->routeIs('contact') ? 'active-link' : '' }}">
+                            Contact
+                        </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
+                        <a href="{{ route('faq') }}"
+                            class="nav-link {{ request()->routeIs('faq') ? 'active-link' : '' }}">
+                            FAQ
+                        </a>
                     </li>
                 </ul>
             </div>
