@@ -41,7 +41,7 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; Kenko-web - 2026</p>
+        <p class="blueFont">&copy; Kenko-web - 2026</p>
     </div>
 </footer>
 

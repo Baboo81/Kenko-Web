@@ -24,6 +24,11 @@
     --noir : #282828;
 }
 
+.blueFont
+{
+    color: var(--vert);
+}
+
 /* --- Wave --- */
 .waveFooter
 {
@@ -95,7 +100,6 @@ footer #mapid
 {
   text-align: center;
   font-weight: 600;
-  color: var(--brun);
   border-top: 1px solid rgba(0,0,0,0.1);
   margin-top: 3rem;
   padding-top: 1.5rem;

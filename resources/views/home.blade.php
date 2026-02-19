@@ -209,11 +209,10 @@
                         <img src="{{ $homeData['maintenance']['img'] }}" alt="{{ $homeData['maintenance']['alt'] }}"
                             class="img-fluid w-100" style="object-fit:cover;">
                     </div>
-
+                    <p class="text-center text-muted p-3">{!! $homeData['maintenance']['intro'] !!}</p>
                     {{-- TEXTE --}}
                     <div class="col-12 col-md-6 order-md-2 order-lg-2">
                         <article class="fontWhite">
-                            <p class="text-center">{!! $homeData['maintenance']['intro'] !!}</p>
                             <h4 class="text-center my-5">{{ $homeData['maintenance']['title'] }}</h4>
 
                             @foreach ($homeData['maintenance']['types'] as $type)
@@ -254,12 +253,10 @@
                         <img src="{{ $homeData['hosting']['img'] ?? '' }}" alt="{{ $homeData['hosting']['alt'] ?? '' }}"
                             class="img-fluid w-100" style="object-fit:cover;">
                     </div>
-
+                    <p class="text-center text-muted p-3 my-3">{!! $homeData['hosting']['intro'] !!}</p>
                     {{-- TEXTE --}}
                     <div class="col-12 col-md-6 order-md-2 order-lg-1">
                         <article class="fontWhite">
-                            <p class="text-center my-5">{!! $homeData['hosting']['intro'] !!}</p>
-
                             @foreach ($homeData['hosting']['sections'] as $section)
                                 <div class="my-3">
                                     <h5 class="underline my-3">{{ $section['title'] }}</h5>
