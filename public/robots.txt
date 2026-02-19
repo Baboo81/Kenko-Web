@@ -1,2 +1,12 @@
 User-agent: *
-Disallow:
+Allow: /
+
+Disallow: /admin/
+Disallow: /config/
+Disallow: /vendor/
+Disallow: /private/
+Disallow: /storage/
+Disallow: /bootstrap/
+Disallow: /.env
+
+Sitemap: https://www.kenko-web.be/sitemap.xml

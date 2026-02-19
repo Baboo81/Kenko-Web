@@ -296,7 +296,6 @@ section .boxWhoIam
 {
     .whoIam
     {
-        margin-top: 5%; /* Réduit la marge supérieure pour les petits écrans */
         padding: 2rem 0; /* Ajoute un peu de padding sur le dessus et le dessous */
     }
 }
