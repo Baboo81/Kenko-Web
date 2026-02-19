@@ -22,7 +22,7 @@ nav
     height: 120px;
     padding: 10px 20px;
     z-index: 9999;
-    background-color: var(--vert);
+    background-color: var(--bleu);
 }
 
 .navbar

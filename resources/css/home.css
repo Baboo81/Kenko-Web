@@ -225,7 +225,7 @@ h6
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.20);
     z-index: 1;
 }
 
