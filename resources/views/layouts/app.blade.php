@@ -18,7 +18,7 @@
 
 
     <!-- Canonical -->
-    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="canonical" href="{{ rtrim(config('app.url'), '/') . request()->getPathInfo() }}">
 
     <!-- Open Graph / Twitter -->
     <meta property="og:title" content="@yield('title')">
