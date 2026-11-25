@@ -9,4 +9,4 @@ Disallow: /storage/
 Disallow: /bootstrap/
 Disallow: /.env
 
-Sitemap: https://www.kenko-web.be/sitemap.xml
+Sitemap: https://kenko-web.be/sitemap.xml
