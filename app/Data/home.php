@@ -3,6 +3,7 @@
 return [
     'home' => [
         'banner' => "Agence web à Waterloo - Création de sites internet et développement web",
+        'intro' => "Basée à Waterloo, Kenko-Web accompagne les indépendants, les commerçants et les entreprises du Brabant wallon dans la création de leur site internet. Je conçois des solutions web sur mesure, alliant design personnalisé, performance, sécurité et référencement naturel.",
     ],
     'purposes' => [
         'main_Title' => "Des solutions web adaptées à votre entreprise",
@@ -12,13 +13,13 @@ return [
             'img' => "/assets/img/pictos/accompagnement.svg",
         ],
         'article2' => [
-            'sub_Title' => "La liberté de choix",
-            'txt' => "Je reste disponible pour assurer les mises à jour et évolutions selon vos besoins.",
+            'sub_Title' => "Un site web évolutif",
+            'txt' => "Votre entreprise évolue, votre site internet aussi. Je vous accompagne dans ses mises à jour, sa maintenance et l'intégration de nouvelles fonctionnalités selon vos besoins.",
             'img' => "/assets/img/pictos/liberté.svg",
         ],
         'article3' => [
-            'sub_Title' => "Un site sur-mesure",
-            'txt' => "Je crée un site qui vous correspond",
+            'sub_Title' => "Un site internet sur mesure",
+            'txt' => "Je développe des sites internet personnalisés, adaptés à votre identité visuelle, à vos objectifs et aux attentes de vos visiteurs. Chaque projet associe design, ergonomie et performance technique.",
             'img' => "/assets/img/pictos/surMesure.svg",
         ],
     ],

@@ -31,6 +31,11 @@
                     <h1 class="secondTitle my-5">
                         {{ $homeData['home']['banner'] ?? '' }}
                     </h1>
+
+                    {{-- Paragraphe introductif --}}
+                    <p class="introText">
+                        {{ $homeData['home']['intro'] ?? '' }}
+                    </p>
                 </div>
             </div>
         </div>
