@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Kenko-Web | Agence web & développement web')</title>
-    <meta name="description" content="@yield('meta_description', 'Développement web sur mesure avec Laravel, SEO et performance.')">
+    <meta name="description" content="@yield('meta_description', 'Agence web à Waterloo, Kenko-Web crée des sites internet sur mesure pour les indépendants et les entreprises du Brabant wallon. Demandez votre devis.')">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     {{-- favicon --}}

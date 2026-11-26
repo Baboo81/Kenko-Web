@@ -2,10 +2,10 @@
 
 return [
     'home' => [
-        'banner' => "Agence web spécialisée en création de sites internet et en développement web",
+        'banner' => "Agence web à Waterloo - Création de sites internet et développement web",
     ],
     'purposes' => [
-        'main_Title' => "Ce que vous propose votre agence web, Kenko-Web",
+        'main_Title' => "Des solutions web adaptées à votre entreprise",
         'article1' => [
             'sub_Title' => "Un accompagnement de qualité",
             'txt' => "Je suis à votre écoute et je vous conseille tout au long de la vie du site",
@@ -23,7 +23,7 @@ return [
         ],
     ],
     'offers' => [
-        'main_Title' => "Les offres personnalisables sur devis",
+        'main_Title' => "Nos offres de création de sites internet",
         'cards' => [
             [
                 'title' => "Site simple",
@@ -79,7 +79,7 @@ return [
         ],
     ],
     'skills' => [
-        'main_Title' => "Les atouts de votre site",
+        'main_Title' => "Les avantages d'un site internet sur mesure",
         'img_content' => "/assets/img/pictos/atouts.svg",
         'alt' => "Picto représentant deux personnages tenant un panneau",
         'article1' => [
@@ -157,7 +157,7 @@ return [
         ],
     ],
     'maintenance' => [
-        'main_Title' => "Service de maintenance",
+        'main_Title' => "Maintenance et sécurité de votre site internet",
         'img' => "/assets/img/pictos/maintenance.svg",
         'alt' => "Illustration représentant des personnages qui règlent des engrenages",
         'intro' => "Un site web bien entretenu, c'est un site sécurisé, performant et toujours à jour !<br />Pour éviter les bugs, améliorer le référencement et assurer une expérience fluide à vos visiteurs, je propose un service de maintenance adapté à vos besoins.<br />Je propose des interventions ponctuelles ou au forfait mensuel selon vos besoins.",
@@ -190,7 +190,7 @@ return [
         ],
     ],
     'hosting' => [
-        'main_Title' => "Hébergement",
+        'main_Title' => "Hébergement de votre site internet",
         'img' => "/assets/img/pictos/miseEnLigne.svg",
         'alt' => "Illustration représentant un personnage assis sur un serveur",
         'intro' => "Pour vous assurer une tranquilité d'esprit totale, je prends en charge l'hébergement de votre site web.<br />Votre site sera hébergé sur un serveur performant et sécurisé, garantissant un accès rapide et fluide à vos visiteurs.",
