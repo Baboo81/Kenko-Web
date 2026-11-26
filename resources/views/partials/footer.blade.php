@@ -31,7 +31,7 @@
                 <h2 class="footer-title">
                     <i class="fas fa-comment-dots me-2"></i>Coordonnées
                 </h2>
-                <p class="footer-text mb-3">Envoyez-moi un mail en cliquant sur l'envoloppe ci-dessous :</p>
+                <p class="footer-text mb-3">Envoyez-moi un mail en cliquant sur l'enveloppe ci-dessous :</p>
                 <a href="mailto:info@kenko-web.be" class="footer-icon-link">
                     <img class="footer-icon" src="/assets/img/footer/email.svg" alt="Icône email">
                 </a>
